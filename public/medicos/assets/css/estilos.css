@@ -36,13 +36,16 @@
   margin-left: 30px;
 }
 
-.prueba .dropdown-menu a {
+.prueba .dropdown-menu button {
   text-decoration: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
-  text-align: center;
   position: relative;
+  text-align: left;
+  background-color: #4B5CEB;
+  width: 150px;
+  border: 0;
 }
 
 .prueba .dropdown-menu li{
