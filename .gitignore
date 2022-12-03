@@ -103,9 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-*.jpg
-*.png
-
 # Sweetalert y boostrap
 public/bootstrap/
 public/sw
