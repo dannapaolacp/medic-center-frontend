@@ -104,3 +104,30 @@ footer {
   width: 79%;
 }
 
+.section{
+  position: absolute;
+  top: 40px;
+  right: 280px;;
+  width: 38%;
+  background-color: #ededed;
+}
+
+.section input{
+  width: 250px;
+  height: 35px;
+  margin: 0;
+}
+
+.doctor {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+}
+
+ /* .editar {
+  width: 30px;
+  height: 30px;
+  right: 0;
+} */
+
+
