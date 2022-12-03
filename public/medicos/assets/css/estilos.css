@@ -107,7 +107,7 @@ footer {
 .section{
   position: absolute;
   top: 40px;
-  right: 270px;;
+  right: 280px;;
   width: 38%;
   background-color: #ededed;
 }
@@ -116,10 +116,6 @@ footer {
   width: 250px;
   height: 35px;
   margin: 0;
-}
-
-.section button{
-  background-color: #2E3FC8;
 }
 
 .doctor {
