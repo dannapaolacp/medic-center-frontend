@@ -74,7 +74,6 @@
               type="button"
               class="btn btn-secondary dropdown-toggle"
               data-bs-toggle="dropdown"
-              onclick="location.href='./crear_medico.html'"
             >
               <img
                 class="icono"
@@ -142,32 +141,88 @@
         </ul>
       </div>
     </div>
-    <footer class="" id="footer">
-    <ul class="nav justify-content-center border-bottom">
-      <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
-      <li><p class="nav-link px-2 text-muted">Danna Paola</p></li>
-      <li><p class="nav-link px-2 text-muted">Daniel Garcia</p></li>
-      <li><p class="nav-link px-2 text-muted">Camilo Duarte</p></li>
-      <li><p class="nav-link px-2 text-muted">Marlon Herrera</p></li>
-    </ul>
-      <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
-    </footer>
-    <section class="eliminar d-flex justify-content-center pt-3" id="eliminar-usuario">
-        <form class="row g-3">
-        <div class="d-flex justify-content-center">
-          <label style="font-weight: bold;">Digite el número de tarjeta profesional del médico a eliminar:</label>
-        </div>
-  <div class="col-auto">
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Ejemplo: 123456">
-  </div>
-  <div class="col-auto">
-    <button id="eliminar" type="submit" class="btn btn-danger mb-3">Eliminar</button>
-  </div>
-</form>
-    </section>
+    <section class="sectioncrear">
+            <div class="imagen pt-2 pb-2 text-center">
+              <img class="d-block mx-auto mb-1" src="../assets/img/medicina.png" alt="" width="72" height="57">
+              <h4 style="font-weight: bold;">Registro de Doctores</h4>
+            </div>
+              <div class="">
+                <h5 class="px-5 mt-1" style="font-weight: bold; text-align: center;">Informacion Personal</h5>
+                <form class="needs-validation px-5" novalidate>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label" style="font-weight: bold;"># tarjeta profecional</label>
+                      <input type="text" class="form-control" id="Numtarjeta" required>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label" style="font-weight: bold;">Nombre completo</label>
+                      <input type="text" class="form-control" id="Nombre" required>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                      <label for="email" class="form-label" style="font-weight: bold;">Correo</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                      <label for="lastName" class="form-label" style="font-weight: bold;">Telefono</label>
+                      <input type="text" class="form-control" id="Telefono" required>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="country" class="form-label" style="font-weight: bold;">Seleccione especialidad</label>
+                      <select class="form-select" id="Selec_especialidad" required>
+                        <option>Seleccione</option>
+                        <option value="Pediatria">Pediatria</option>
+                        <option value="Medicina interna">Medicina interna</option>
+                        <option value="Urologia">Urologia</option>
+                        <option value="Neurologia">Neurologia</option>
+                        <option value="Hematologia">Hematologia</option>
+                        <option value="Hepatologia">Hepatologia</option>
+                        <option value="Oncologia">Oncologia</option>
+                        <option value="Neumologia">Neumologia</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="Psiquiatria">Psiquiatría</option>
+                      </select>
+                    </div>
+                    <h5 class="mb-1" style="font-weight: bold; text-align: center;">Contraseña</h5>
+                    <div class="col-sm-6 mt-1">
+                      <label for="address" class="form-label" style="font-weight: bold;">Contraseña</label>
+                      <input type="password" class="form-control" id="contraseña1"  required>
+                    </div>
+                    <div class="col-sm-6 mt-1">
+                      <label for="address2" class="form-label" style="font-weight: bold;">Repita la Contraseña</label>
+                      <input type="password" class="form-control" id="contraseña2">
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                      <label for="country" class="form-label" style="font-weight: bold;">Preguntas de seguridad</label>
+                      <select class="form-select" id="Selec_seguridad" required>
+                        <option>Seleccione la pregunta de seguridad</option>
+                        <option value="Nom_primera_m">Nombre de la primera mascota</option>
+                        <option value="Equipo_fut">Equipo favorito de futbol</option>
+                        <option value="Lugar_favo">Nombre de lugar favorito</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6 mt-2">
+                       <label for="country" class="form-label" style="font-weight: bold;">Respuesta pregunta de seguridad:</label>
+                      <input type="text" class="form-control" id="Result_select_seguridad_Medico"  required>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-3">
+                  <button class="w-50 btn btn-danger btn-lg " type="submit">Registrar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            </section>
+  <!--Section: Design Block-->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script> -->
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/limpiar.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
     <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
   </body>
 </html>
+
+

@@ -1,7 +1,3 @@
-$('#reporte_paciente,#reporte_medico,#crear').click(function () {
+$('#reporte_paciente,#reporte_medico').click(function () {
   $('#carusel').remove();
-});
-
-$('#reporte_paciente,#reporte_medico,#crear').click(function () {
-  $('#eliminar-usuario').remove();
 });

@@ -132,4 +132,23 @@ footer {
   left: 125px;
 }
 
+.sectioncrear{
+  position: absolute;
+  top: 5px;
+  right: 160px;
+  width: 53%;
+  padding-bottom: 5px;
+  background-color: #ededed;
+}
+
+.sectioncrear .imagen{
+  background-color: darkgrey;
+}
+
+.sectioncrear input{
+  width: 300px;
+}
+.sectioncrear select {
+  width: 300px;
+}
 
