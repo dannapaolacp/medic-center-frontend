@@ -114,10 +114,22 @@ footer {
   background-color: grey;
 }
 
- /* .editar {
-  width: 30px;
-  height: 30px;
-  right: 0;
-} */
+.eliminar {
+  position: absolute;
+  top: 150px;
+  right: 240px;
+  width: 40%;
+  background-color: #ededed;
+}
+
+.eliminar input {
+  position: relative;
+  left: 115px;
+}
+
+.eliminar button{
+  position: relative;
+  left: 125px;
+}
 
 
