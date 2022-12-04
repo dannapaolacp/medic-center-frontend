@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />    
+    <title>Paciente</title>
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="prueba d-flex flex-column flex-shrink-0 p-3"
+      style="width: 280px; position: absolute; top: 0; left: 0; bottom: 0"
+    >
+      <a
+        href="#"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+      >
+        <img
+                class="avatar"
+                src="assets/img/paciente.png"
+                alt="paciente"
+              />
+        <span class="fs-4">Paciente Danna Paola</span>
+      </a>
+      <hr />
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle "
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono_1"
+                src="assets/img/cita-medica.png"
+                alt="Agendar cita"
+              />
+              Agendar cita
+            </button>
+            <ul class="dropdown-menu">
+              <li><button onclick="location.href='askDate.html'" class="diseño" id="solicitar">Solicitar cita</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono_1"
+                src="assets/img/calendario.png"
+                alt="Calendario"
+              />
+              Calendario
+            </button>
+            <ul class="dropdown-menu">
+              <li><button onclick="location.href='viewDate.html'" class="diseño" id="ver">Ver citas</button></li>              
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono"
+                src="assets/img/doctor.png"
+                alt="Especialidades"
+              />
+              Especialidades
+            </button>
+            <ul class="dropdown-menu">
+              <li><button onclick="location.href='consultDoctors.html'" class="diseño" id="consultar">Consultar doctores</button></li> 
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <div class="dropdown">
+        <a
+          href="#"
+          class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+                class="usuario"
+                src="assets/img/paciente.png"
+                alt="paciente"
+              />
+          <strong>Usuario</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li><button class="dropdown-item w-100" id="perfil">Perfil</button></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button class="dropdown-item w-100">Configurar</button></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button class="dropdown-item w-100">Cerrar Sesión</button></li>          
+        </ul>
+      </div>
+    </div>
+    <div class="carusel" id="carusel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active hospital">
+      <img src="./assets/img/mental.webp" class="d-block w-100" alt="Imagen de psicologia">
+    </div>
+    <div class="carousel-item hospital">
+      <img src="./assets/img/cardiologia.jpg" class="d-block w-100" alt="Imagen de cardiologia">
+    </div>
+    <div class="carousel-item hospital">
+      <img src="./assets/img/covid.jpeg" class="d-block" alt="Imagen de covid">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+    <footer class="" id="footer">
+    <ul class="nav justify-content-center border-bottom">
+      <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
+      <li><p class="nav-link px-2 text-muted">Danna Paola</p></li>
+      <li><p class="nav-link px-2 text-muted">Daniel Garcia</p></li>
+      <li><p class="nav-link px-2 text-muted">Camilo Duarte</p></li>
+      <li><p class="nav-link px-2 text-muted">Marlon Herrera</p></li>
+    </ul>
+      <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
+    </footer>
+    <section class="section d-flex justify-content-center" id="section-perfil"></section>  
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/funciones.js"></script>
+    <script src="../sw/dist/sweetalert2.min.js"></script>
+  </body>
+</html>
