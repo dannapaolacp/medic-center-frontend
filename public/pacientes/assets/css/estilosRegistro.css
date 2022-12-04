@@ -1,0 +1,28 @@
+:root {
+  /* --principal-color: #21209c;
+  --secondary-color: #5463ff; */
+  background: #72c8f1;
+}
+
+body {
+  background: var(--principal-color);
+  background: linear-gradient(to right,
+      var(--principal-color),
+      var(--secondary-color));
+}
+
+.separator-bottom {
+  margin-bottom: 0.5rem;
+}
+
+.login_box {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: linear-gradient(#008383, #06c4c4);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-left: 60%;
+  padding: 0px 20px;
+}
