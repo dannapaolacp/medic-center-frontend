@@ -1,4 +1,18 @@
-$('#registrationbutton').click(() => {
+let buttonEnviar = document.getElementById('registrationbutton');
+
+buttonEnviar.addEventListener('click', function () {
+  let cc = document.getElementById('cc');
+  let names = document.getElementById('names');
+  let password = document.getElementById('password');
+  let passwordConfirm = document.getElementById('passwordConfirm');
+  let phone = document.getElementById('phone');
+  let email = document.getElementById('email');
+  let weight = document.getElementById('weight');
+  let age = document.getElementById('age');
+  let birth = document.getElementById('birth');
+  let answer = document.getElementById('answer');
+  let response = document.getElementById('response');
+
   if (cc.value == 0) {
     Swal.fire({
       icon: 'error',
@@ -109,7 +123,7 @@ $('#registrationbutton').click(() => {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar su peso correctamente',
     });
     weight.value = '';
     weight.focus();
@@ -129,7 +143,7 @@ $('#registrationbutton').click(() => {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar su estatura correctamente',
     });
     height.value = '';
     height.focus();
@@ -188,8 +202,11 @@ $('#registrationbutton').click(() => {
     let registrationJson = JSON.stringify(registration);
     console.log(registrationJson);
 
-    fetch('http://localhost:3000/patients', {
+    fetch('http://localhost:3000/api/patients', {
       method: 'Post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: registrationJson,
     });
   } else {
