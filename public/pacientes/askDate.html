@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solicitar cita</title>
     <link rel="stylesheet" href="assets/css/estilos.css" />
@@ -14,7 +14,7 @@
     <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />    
+    <meta charset="UTF-8" />
     <title>Paciente</title>
     <link rel="stylesheet" href="assets/css/estilos.css" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
@@ -29,7 +29,7 @@
       <a
         href="#"
         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-      >        
+      >
         <img
                 class="avatar"
                 src="assets/img/paciente.png"
@@ -39,7 +39,7 @@
       </a>
       <hr />
       <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">        
+        <li class="nav-item">
           <div class="btn-group dropend">
             <button
               type="button"
@@ -75,7 +75,7 @@
               Calendario
             </button>
             <ul class="dropdown-menu">
-              <li><button onclick="location.href='viewDate.html'" class="diseño" id="ver">Ver citas</button></li>              
+              <li><button onclick="location.href='viewDate.html'" class="diseño" id="ver">Ver citas</button></li>
             </ul>
           </div>
         </li>
@@ -95,7 +95,7 @@
               Especialidades
             </button>
             <ul class="dropdown-menu">
-              <li><button onclick="location.href='consultDoctors.html'" class="diseño" id="consultar">Consultar doctores</button></li> 
+              <li><button onclick="location.href='consultDoctors.html'" class="diseño" id="consultar">Consultar doctores</button></li>
             </ul>
           </div>
         </li>
@@ -116,11 +116,11 @@
           <strong>Usuario</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-          <li><button class="dropdown-item w-100" id="perfil">Perfil</button></li>
+          <li><button onclick="location.href='profile.html'" class="dropdown-item w-100" id="perfil">Perfil</button></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><button class="dropdown-item w-100">Configurar</button></li>
+          <li><button onclick="location.href='patientSettings.html'" class="dropdown-item w-100">Configurar</button></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><button class="dropdown-item w-100">Cerrar Sesión</button></li>          
+          <li><button class="dropdown-item w-100">Cerrar Sesión</button></li>
         </ul>
       </div>
     </div>
@@ -131,37 +131,37 @@
         <div class="card-body">
             <form action="formulario" action="askDate.html" method="post">
                 <div class="container ">
-                    <table class="table">                       
+                    <table class="table">
                         <tr>
-                            <th>                        
+                            <th>
                                 <th>Digite su cedula: </th>
-                                <td><input type="number" class="form-control"+ name="cc" id="cc" placeholder="ej: 1234567890"></td>                    
+                                <td><input type="number" class="form-control"+ name="cc" id="cc" placeholder="ej: 1234567890"></td>
                             </th>
                         </tr>
                         <tr>
-                            <th>                        
+                            <th>
                                 <th>Seleccione la hora: </th>
-                                <td><input type="time" class="form-control" name="hour"></td>                    
+                                <td><input type="time" class="form-control" name="hour"></td>
                             </th>
                         </tr>
                         <tr>
-                            <th>                        
+                            <th>
                                 <th>Seleccione la fecha: </th>
-                                <td><input type="date" class="form-control" name="date"></td>                    
+                                <td><input type="date" class="form-control" name="date"></td>
                             </th>
                         </tr>
                         <tr>
-                            <th>                        
+                            <th>
                                 <th>Tipo de cita: </th>
                                 <td><select name="description" class="form-control" id="description">
                                     <option>Seleccionar..</option>
                                     <option value="">Control</option>
                                     <option value="">Primera vez</option>
-                                </select></td>                    
+                                </select></td>
                             </th>
                         </tr>
                         <tr>
-                            <th>                        
+                            <th>
                                 <th>Seleccione un doctor: </th>
                                 <td><select name="doctor" class="form-control" id="doctor">
                                     <option>Seleccionar..</option>
@@ -169,7 +169,7 @@
                                     <option value="">Pepe Perez</option>
                                     <option value="">Alvin Yakitory</option>
                                     <option value="">Jefferson Gutierritos</option>
-                                </select></td>                    
+                                </select></td>
                             </th>
                         </tr>
                     </table>
@@ -177,7 +177,7 @@
                 <button type="button" class="login_box">Solicitar</button>
             </form>
         </div>
-    </div>    
+    </div>
     <footer class="" id="footer">
     <ul class="nav justify-content-center border-bottom">
       <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>

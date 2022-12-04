@@ -139,7 +139,7 @@ footer {
 .tabla {
   border: 0;
   align-content: center;
-  text-align: center;  
+  text-align: center;
 }
 
 
@@ -148,7 +148,7 @@ footer {
   text-align: center;
 }
 
-.body{
+body{
   /* font-family: 'Roboto'; */
   background: white;
   height: 650px;
@@ -166,8 +166,8 @@ footer {
 
 .information{
   background-color: white;
-  width: 65%;
-  height: 65%;
+  width: 75%;
+  height: 75%;
   position: absolute;
   right: 85px;
   margin-top: 50px;
