@@ -1,8 +1,8 @@
-$('#modificar,#consultar,#exportar,#aplazar,#ver,#dias,#perfil').click(
-  function () {
-    $('#carusel').remove();
-  }
-);
+$(
+  '#reporte_paciente,#reporte_medico,#crear,#eliminar_med,#eliminar_pac,#perfil'
+).click(function () {
+  $('#carusel').remove();
+});
 const perfilS = document.querySelector('#section-perfil');
 $('#perfil').click(function () {
   perfilS.innerHTML = `
@@ -10,7 +10,7 @@ $('#perfil').click(function () {
           <div class="card-header pt-5">
             <img
                 class="doctor"
-                src="assets/img/doctor.png"
+                src="assets/img/admin.png"
                 alt="doctor"
               />
           </div>
@@ -18,11 +18,11 @@ $('#perfil').click(function () {
             <form class="px-4">
               <div class="row g-2">
               <div class="col-md">
-                <label id="cedula_doctor" class="mb-2" for="floatingInputGrid">Cédula del doctor</label>
+                <label id="cedula_admin" class="mb-2" for="floatingInputGrid">Cédula del administrador</label>
                     <input type="text" class="form-control p-1" id="floatingInputGrid" readonly>
               <div class="row g-2">
               <div class="col-md">
-                <label id="nombre_doctor" class="mb-2 mt-2" for="floatingInputGrid">Nombre del doctor</label>
+                <label id="nombre_admin" class="mb-2 mt-2" for="floatingInputGrid">Nombre del administrador</label>
                     <input type="text" class="form-control p-1" id="floatingInputGrid" readonly>
               </div>
                   <div class="col-md">
@@ -36,7 +36,7 @@ $('#perfil').click(function () {
               </div>
               <div class="row g-2">
               <div class="col-md">
-                <label id="correo_doctor" class="mb-2 mt-2" for="floatingInputGrid">Correo electronico</label>
+                <label id="correo_admin" class="mb-2 mt-2" for="floatingInputGrid">Correo electronico</label>
                     <input type="email" class="form-control p-1" id="floatingInputGrid" readonly>
               </div>
                   <div class="col-md">
@@ -50,21 +50,7 @@ $('#perfil').click(function () {
               </div>
               <div class="row g-2">
               <div class="col-md">
-                <label id="celular_doctor" class="mb-2 mt-2" for="floatingInputGrid">Celular</label>
-                    <input type="text" class="form-control p-1" id="floatingInputGrid" readonly>
-              </div>
-                  <div class="col-md">
-                      <br>
-                      <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
-                                                    class="editar"
-                                                    src="assets/img/lapiz.png"
-                                                    alt="doctor"
-                        /></button>
-                  </div>
-              </div>
-              <div class="row g-2">
-              <div class="col-md">
-                <label id="especialidad_doctor" class="mb-2 mt-2" for="floatingInputGrid">Especialidad</label>
+                <label id="celular_admin" class="mb-2 mt-2" for="floatingInputGrid">Celular</label>
                     <input type="text" class="form-control p-1" id="floatingInputGrid" readonly>
               </div>
                   <div class="col-md">
