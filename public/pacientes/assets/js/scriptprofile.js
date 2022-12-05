@@ -16,7 +16,7 @@ const getUser = async () => {
   email.value = patients.email;
   phone.value = patients.phone;
   age.value = patients.age;
-  birth.value = 'patients.birth';
+  birth.value = patients.birth;
   weight.value = patients.weight;
   height.value = patients.height;
 };
@@ -64,7 +64,7 @@ let registrationJson;
 
 const udpateUser = async () => {
   const data = await fetch(`http://localhost:3000/api/patient/${cc.value}`, {
-    method: 'patch',
+    method: 'put',
     body: registrationJson,
     headers: {
       'Content-Type': 'application/json',
