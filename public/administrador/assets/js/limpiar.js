@@ -1,8 +1,8 @@
 const getUser = async () => {
-  const cedu = 1000;
+  const cedu = 100;
   const data = await fetch(`http://localhost:3000/api/admin/${cedu}`);
   const admin = await data.json();
-  console.log(admin);
+  console.log(medic);
   let ced = document.getElementById('cedula');
   let names = document.getElementById('names');
   let email = document.getElementById('email');
