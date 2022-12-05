@@ -2,11 +2,11 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Paciente</title>
-    <link rel="stylesheet" href="assets/css/estilos.css" />
+    <link rel="stylesheet" href="./assets/css/estilos.css" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
     <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <title>Configuraciones</title>
   </head>
   <body>
     <div
@@ -120,12 +120,7 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
           <li>
-            <button
-              onclick="location.href='profile.html'"
-              class="dropdown-item w-100"
-            >
-              Perfil
-            </button>
+            <button onclick="location.href='profile.html'" class="dropdown-item w-100" id="perfil">Perfil</button>
           </li>
           <li><hr class="dropdown-divider" /></li>
           <li>
@@ -141,77 +136,112 @@
         </ul>
       </div>
     </div>
-    <div class="carusel" id="carusel">
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="true"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active hospital">
-            <img
-              src="./assets/img/mental.webp"
-              class="d-block w-100"
-              alt="Imagen de psicologia"
-            />
+    <div class="information">
+      <div class="head1">Configuraciones</div>
+      <div class="card-body">
+        <form id="configurationform">
+          <div class="container ">
+            <table class="table">
+                <tr>
+                    <th>
+                        <th>Cedula: </th>
+                        <td><input type="number" class="form-control" id="cc" /></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Edad: </th>
+                        <td><input type="number" min="1" max="120" class="form-control" id="age"/></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Nombre: </th>
+                        <td><input type="text" class="form-control" id="names" /></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Telefono: </th>
+                        <td><input type="number" class="form-control" id="phone" /></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Correo electronico: </th>
+                        <td><input type="email" class="form-control" id="email" /></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Estatura: </th>
+                        <td><input type="number" step="0.1" class="form-control" id="height"/></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Peso: </th>
+                        <td><input type="number" step="0.1" class="form-control" id="weight"/></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Fecha de nacimiento: </th>
+                        <td><input type="date" class="form-control" id="birth" /></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Pregunta de seguridad: </th>
+                        <td><select id="answer" class="form-select">
+                          <option></option>
+                          <option value="como se llama su papa">
+                            Como se llama su papá
+                          </option>
+                          <option value="Como se llama su mamá">
+                            Como se llama su mamá
+                          </option>
+                          <option value="Como se llama su abuelo">
+                            Como se llama su abuelo
+                          </option>
+                          <option value="Como se llama su primer perro">
+                            Como se llama su primer perro
+                          </option>
+                        </select></td>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <th>Respuesta:</th>
+                        <td><input type="text" class="form-control" id="response" /></td>
+                    </th>
+                </tr>
+            </table>
           </div>
-          <div class="carousel-item hospital">
-            <img
-              src="./assets/img/cardiologia.jpg"
-              class="d-block w-100"
-              alt="Imagen de cardiologia"
-            />
-          </div>
-          <div class="carousel-item hospital">
-            <img
-              src="./assets/img/covid.jpeg"
-              class="d-block"
-              alt="Imagen de covid"
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+                <button type="button" class="login_box">Guardar</button>
+        </form>
       </div>
     </div>
+          <!-- <div class="row separator-bottom">
+            <div class="col-6 col-sm-6">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+            <div class="col-6 col-sm-6">
+              <label for="passwordConfirm" class="form-label"
+                >Repita su Contraseña:</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="passwordConfirm"
+              />
+            </div> -->
+    </div>
+    </div>
+  </div>
+</div>
+
     <footer class="" id="footer">
       <ul class="nav justify-content-center border-bottom">
         <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
