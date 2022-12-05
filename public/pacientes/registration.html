@@ -17,7 +17,7 @@
         <div>
           <h2 class="fw-bold text-center pt-5 mb-5">Registrate</h2>
           <!--login-->
-          <form id="registrationform">
+          <form id="registrationform" name="registrationform">
             <div class="row separator-bottom">
               <div class="col-6 col-sm-6">
                 <label for="cc" class="form-label">Cedula:</label>
@@ -29,7 +29,7 @@
               </div>
             </div>
             <div class="row separator-bottom">
-              <div class="col-12 col-sm-12">
+              <div class="col-12 col-sm-12" id="nombre" name="nombre">
                 <label for="names" class="form-label">Tu nombre:</label>
                 <input type="text" class="form-control" id="names" />
               </div>
@@ -84,8 +84,6 @@
                 <input type="text" class="form-control" id="response" />
               </div>
             </div>
-
-
             <br>
             <div class="d-grid separator-bottom">
               <button type="button" id="registrationbutton"class="login_box">
