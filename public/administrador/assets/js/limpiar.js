@@ -1,16 +1,16 @@
 const getUser = async () => {
-  const cedu = 100;
+  const cedu = 1000;
   const data = await fetch(`http://localhost:3000/api/admin/${cedu}`);
   const admin = await data.json();
-  console.log(medic);
+  console.log(admin);
   let ced = document.getElementById('cedula');
   let names = document.getElementById('names');
   let email = document.getElementById('email');
   let phone = document.getElementById('phone');
-  ced.value = admin.cc;
-  names.value = admin.name;
-  email.value = admin.email;
-  phone.value = admin.phone;
+  ced.value = admin[0].cc;
+  names.value = admin[0].name;
+  email.value = admin[0].email;
+  phone.value = admin[0].phone;
 };
 
 getUser();
