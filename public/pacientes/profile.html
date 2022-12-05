@@ -8,7 +8,7 @@
     <script src="../assets/js/jquery-3.6.1.min.js"></script>
     <title>Perfil</title>
   </head>
-  <body>    
+  <body>
     <div
       class="prueba d-flex flex-column flex-shrink-0 p-3"
       style="width: 280px; position: absolute; top: 0; left: 0; bottom: 0"
@@ -117,11 +117,11 @@
         >
           <img class="usuario" src="assets/img/paciente.png" alt="paciente" />
           <strong>Usuario</strong>
-        </a>        
+        </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
           <li>
             <button onclick="location.href='profile.html'" class="dropdown-item w-100" id="perfil">Perfil</button>
-          </li>      
+          </li>
           <li><hr class="dropdown-divider" /></li>
           <li><button class="dropdown-item w-100">Cerrar Sesión</button></li>
         </ul>
@@ -130,14 +130,14 @@
 
     <!-- aqui iba information -->
 
-    
+
     <section
       class="section d-flex justify-content-center"
       id="section-perfil"
     ></section>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/funciones.js"></script>
-    <script src="./assets/js/functionsRegistration.js"></script>
+    <script src="./assets/js/script.js"></script><s
     <script src="../sw/dist/sweetalert2.min.js"></script>
 
     <!-- seccion de muestra de datos -->
@@ -159,10 +159,10 @@
               <label class="mb-2 mt-2" for="cc">Cédula del paciente</label>
                   <input type="number" class="form-control p-1" id="cc" readonly>
             </div>
-            
+
             <div class="col-5 col-sm-5">
-              <label id="name" class="mb-2 mt-2" for="name">Nombre del paciente</label>
-                  <input type="text" class="form-control p-1" id="name" readonly>
+              <label  class="mb-2 mt-2" for="names">Nombre del paciente</label>
+                  <input type="text" class="form-control p-1" id="names" readonly>
             </div>
             <div class="col-1 col-sm-1">
               <br>
@@ -171,12 +171,12 @@
                                             src="assets/img/lapiz.png"
                                             alt="paciente"
                 /></button>
-          </div>  
+          </div>
             </div>
 
             <div class="row separator-bottom">
               <div class="col-5 col-sm-5">
-                <label id="email" class="mb-2 mt-2" for="email">Correo electronico</label>
+                <label  class="mb-2 mt-2" for="email">Correo electronico</label>
                   <input type="email" class="form-control p-1" id="email" readonly>
               </div>
               <div class="col-1 col-sm-1">
@@ -188,9 +188,9 @@
                   /></button>
             </div>
               <div class="col-5 col-sm-5">
-                <label id="phone" class="mb-2 mt-2" for="phone">Telefono</label>
+                <label  class="mb-2 mt-2" for="phone">Telefono</label>
                   <input type="number" class="form-control p-1" id="phone" readonly>
-              </div> 
+              </div>
               <div class="col-1 col-sm-1">
                 <br>
                 <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
@@ -198,23 +198,23 @@
                                               src="assets/img/lapiz.png"
                                               alt="paciente"
                   /></button>
-            </div> 
+            </div>
               </div>
 
               <div class="row separator-bottom">
-                <div class="col-6 col-sm-6">                  
-                  <label id="age" class="mb-2 mt-2" for="age">Edad</label>
+                <div class="col-6 col-sm-6">
+                  <label  class="mb-2 mt-2" for="age">Edad</label>
                   <input type="number" min="1" max="120" class="form-control p-1" id="age" readonly>
                 </div>
                 <div class="col-6 col-sm-6">
-                  <label id="birth" class="mb-2 mt-2" for="birth">Fecha de nacimiento</label>
+                  <label  class="mb-2 mt-2" for="birth">Fecha de nacimiento</label>
                     <input type="date" class="form-control p-1" id="birth" readonly>
-                </div>  
+                </div>
                 </div>
 
                 <div class="row separator-bottom">
-                  <div class="col-5 col-sm-5">                  
-                    <label id="height" class="mb-2 mt-2" for="height">Estatura</label>
+                  <div class="col-5 col-sm-5">
+                    <label  class="mb-2 mt-2" for="height">Estatura</label>
                     <input type="number" class="form-control p-1" id="height" readonly>
                   </div>
                   <div class="col-1 col-sm-1">
@@ -226,7 +226,7 @@
                       /></button>
                 </div>
                   <div class="col-5 col-sm-5">
-                    <label id="weight" class="mb-2 mt-2" for="weight">Peso</label>
+                    <label  class="mb-2 mt-2" for="weight">Peso</label>
                     <input type="text" class="form-control p-1" id="weight" readonly>
                   </div>
                   <div class="col-1 col-sm-1">
@@ -236,8 +236,8 @@
                                                   src="assets/img/lapiz.png"
                                                   alt="paciente"
                       /></button>
-                </div>  
-                  </div>                         
+                </div>
+                  </div>
           </form>
         </div>
   </section>
