@@ -117,147 +117,144 @@
         >
           <img class="usuario" src="assets/img/paciente.png" alt="paciente" />
           <strong>Usuario</strong>
-        </a>        
+        </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
           <li>
             <button onclick="location.href='profile.html'" class="dropdown-item w-100" id="perfil">Perfil</button>
-          </li>
-          <li><hr class="dropdown-divider" /></li>
-          <li>
-            <button
-              onclick="location.href='patientSettings.html'"
-              class="dropdown-item w-100"
-            >
-              Configurar
-            </button>
           </li>
           <li><hr class="dropdown-divider" /></li>
           <li><button class="dropdown-item w-100">Cerrar Sesión</button></li>
         </ul>
       </div>
     </div>
-    <div class="information">
-      <div class="head1">Perfil</div>
-      <div class="card-body">        
-          <div class="container ">
-            <table class="table">
-                <tr>
-                    <th>
-                        <th>Cedula: </th>
-                        <td><input type="number" class="form-control" id="cc" /></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Edad: </th>
-                        <td><input type="number" min="1" max="120" class="form-control" id="age"/></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Nombre: </th>
-                        <td><input type="text" class="form-control" id="names" /></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Telefono: </th>
-                        <td><input type="number" class="form-control" id="phone" /></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Correo electronico: </th>
-                        <td><input type="email" class="form-control" id="email" /></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Estatura: </th>
-                        <td><input type="number" step="0.1" class="form-control" id="height"/></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Peso: </th>
-                        <td><input type="number" step="0.1" class="form-control" id="weight"/></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Fecha de nacimiento: </th>
-                        <td><input type="date" class="form-control" id="birth" /></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Pregunta de seguridad: </th>
-                        <td><select id="answer" class="form-select">
-                          <option></option>
-                          <option value="como se llama su papa">
-                            Como se llama su papá
-                          </option>
-                          <option value="Como se llama su mamá">
-                            Como se llama su mamá
-                          </option>
-                          <option value="Como se llama su abuelo">
-                            Como se llama su abuelo
-                          </option>
-                          <option value="Como se llama su primer perro">
-                            Como se llama su primer perro
-                          </option>
-                        </select></td>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <th>Respuesta:</th>
-                        <td><input type="text" class="form-control" id="response" /></td>
-                    </th>
-                </tr>
-            </table>
-          </div>        
-      </div>
-    </div>
-          <!-- <div class="row separator-bottom">
-            <div class="col-6 col-sm-6">
-              <label for="password" class="form-label">Contraseña:</label>
-              <input type="password" class="form-control" id="password" />
-            </div>
-            <div class="col-6 col-sm-6">
-              <label for="passwordConfirm" class="form-label"
-                >Repita su Contraseña:</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="passwordConfirm"
-              />
-            </div> -->
-    </div>
-    </div>
-  </div>
-</div>
 
-    <footer class="" id="footer">
-      <ul class="nav justify-content-center border-bottom">
-        <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
-        <li><p class="nav-link px-2 text-muted">Danna Paola</p></li>
-        <li><p class="nav-link px-2 text-muted">Daniel Garcia</p></li>
-        <li><p class="nav-link px-2 text-muted">Camilo Duarte</p></li>
-        <li><p class="nav-link px-2 text-muted">Marlon Herrera</p></li>
-      </ul>
-      <p class="text-center text-muted mt-3">
-        Universidad Francisco José de Caldas
-      </p>
-    </footer>
+    <!-- aqui iba information -->
+
+
     <section
       class="section d-flex justify-content-center"
       id="section-perfil"
     ></section>
+
+
+    <!-- seccion de muestra de datos -->
+
+    <section class="section d-flex justify-content-center" id="section-perfil">
+      <div class="w-100 d-flex justify-content-center">
+        <div class="card-header pt-5">
+          <img
+              class="paciente"
+              src="assets/img/paciente.png"
+              alt="paciente"
+            />
+        </div>
+        <div class="card-body">
+          <form class="px-4">
+
+            <div class="row separator-bottom">
+            <div class="col-6 col-sm-6">
+              <label class="mb-2 mt-2" for="cc">Cédula del paciente</label>
+                  <input type="number" class="form-control p-1" id="cc" readonly>
+            </div>
+
+            <div class="col-5 col-sm-5">
+              <label  class="mb-2 mt-2" for="names">Nombre del paciente</label>
+                  <input type="text" class="form-control p-1" id="names" readonly>
+            </div>
+            <div class="col-1 col-sm-1">
+              <br>
+              <button class="mt-3" style="right: 50px; border: 0;" id="unames"><img style="width: 30px; height: 30px;"
+                                                    class="editar"
+                                                    src="assets/img/lapiz.png"
+                                                    alt="doctor"
+                        /></button>
+          </div>
+            </div>
+
+            <div class="row separator-bottom">
+              <div class="col-5 col-sm-5">
+                <label  class="mb-2 mt-2" for="email">Correo electronico</label>
+                  <input type="email" class="form-control p-1" id="email" readonly>
+              </div>
+              <div class="col-1 col-sm-1">
+                <br>
+                <button id="uemail" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                                              class="editar"
+                                              src="assets/img/lapiz.png"
+                                              alt="paciente"
+                  /></button>
+            </div>
+              <div class="col-5 col-sm-5">
+                <label  class="mb-2 mt-2" for="phone">Telefono</label>
+                  <input type="number" class="form-control p-1" id="phone" readonly>
+              </div>
+              <div class="col-1 col-sm-1">
+                <br>
+                <button id="uphone" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                                              class="editar"
+                                              src="assets/img/lapiz.png"
+                                              alt="paciente"
+                  /></button>
+            </div>
+              </div>
+
+              <div class="row separator-bottom">
+                <div class="col-6 col-sm-6">
+                  <label  class="mb-2 mt-2" for="age">Edad</label>
+                  <input type="number" min="1" max="120" class="form-control p-1" id="age" readonly>
+                </div>
+                <div class="col-6 col-sm-6">
+                  <label  class="mb-2 mt-2" for="birth">Fecha de nacimiento</label>
+                    <input type="date" class="form-control p-1" id="birth" >
+                </div>
+                </div>
+
+                <div class="row separator-bottom">
+                  <div class="col-5 col-sm-5">
+                    <label  class="mb-2 mt-2" for="height">Estatura</label>
+                    <input type="number" class="form-control p-1" id="height" readonly>
+                  </div>
+                  <div class="col-1 col-sm-1">
+                    <br>
+                    <button id="uheight" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                                                  class="editar"
+                                                  src="assets/img/lapiz.png"
+                                                  alt="paciente"
+                      /></button>
+                </div>
+                  <div class="col-5 col-sm-5">
+                    <label  class="mb-2 mt-2" for="weight">Peso</label>
+                    <input type="text" class="form-control p-1" id="weight" readonly>
+                  </div>
+                  <div class="col-1 col-sm-1">
+                    <br>
+                    <button id="uweight" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                                                  class="editar"
+                                                  src="assets/img/lapiz.png"
+                                                  alt="paciente"
+                      /></button>
+                </div>
+                  </div>
+                  <br><br>
+                  <button type="button" id="buttonUpdate" class="login_box">Guardar</button>
+          </form>
+        </div>
+  </section>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/funciones.js"></script>
-    <script src="./assets/js/functionsRegistration.js"></script>
+    <script src="./assets/js/scriptprofile.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
+
+  <footer class="" id="footer">
+    <ul class="nav justify-content-center border-bottom">
+      <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
+      <li><p class="nav-link px-2 text-muted">Danna Paola</p></li>
+      <li><p class="nav-link px-2 text-muted">Daniel Garcia</p></li>
+      <li><p class="nav-link px-2 text-muted">Camilo Duarte</p></li>
+      <li><p class="nav-link px-2 text-muted">Marlon Herrera</p></li>
+    </ul>
+    <p class="text-center text-muted mt-3">
+      Universidad Francisco José de Caldas
+    </p>
+  </footer>
   </body>
 </html>
