@@ -193,3 +193,25 @@ tr{
   margin-left: 41em;
   padding: 0px 20px;
 }
+
+/* muestra de datos */
+
+.section{
+  position: absolute;
+  top: 40px;
+  right: 280px;;
+  width: 55%;
+  background-color: #ededed;
+}
+
+.section input{
+  width: 250px;
+  height: 35px;
+  margin: 0;
+}
+
+.paciente {
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+}
