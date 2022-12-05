@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <title>Administrador</title>
+    <link rel="stylesheet" href="assets/css/estilos_adm.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="prueba d-flex flex-column flex-shrink-0 p-3"
+      style="width: 280px; position: absolute; top: 0; left: 0; bottom: 0"
+    >
+      <a id="name_administrador"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+      >
+        </svg>
+        <img
+                class="avatar"
+                src="assets/img/gerente.png"
+                alt="doctor"
+              />
+        <p class="fs-4">Administrador Daniel Garcia</p>
+      </a>
+      <hr />
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item mb-2">
+          <!-- Default dropend button -->
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle "
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono"
+                src="assets/img/analitica.png"
+                alt="visitas"
+              />
+              Reporte paciente
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="diseño pe-2 px-4" id="reporte_paciente">Generar reporte</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono"
+                src="assets/img/reporte_m.png"
+                alt="historia"
+              />
+              Reporte médico
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="diseño pe-2 px-4" id="reporte_medico">Generar reporte</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button id="crear"
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              onclick="location.href='./crear_medico.html'"
+            >
+              <img
+                class="icono"
+                src="assets/img/doctor.png"
+                alt="logo_calendario"
+              />
+              Crear médico
+            </button>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button id="eliminar_med"
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              onclick="location.href='./eliminar_medico.html'"
+            >
+              <img
+                class="icono"
+                src="assets/img/despedido.png"
+                alt="logo_calendario"
+              />
+              Eliminar médico
+            </button>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button id="eliminar_pac"
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              onclick="location.href='./eliminar_paciente.html'"
+            >
+              <img
+                class="icono"
+                src="assets/img/basura.png"
+                alt="logo_calendario"
+              />
+              Eliminar paciente
+            </button>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <div class="dropdown">
+        <a
+          href="#"
+          class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+                class="usuario"
+                src="assets/img/gerente.png"
+                alt="doctor"
+              />
+          <strong>Usuario</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li><button class="dropdown-item w-100" id="perfil">Perfil</button></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button class="dropdown-item w-100" id="close">Cerrar Sesión</button></li>
+        </ul>
+      </div>
+    </div>
+    <footer class="" id="footer">
+    <ul class="nav justify-content-center border-bottom">
+      <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
+      <li><p class="nav-link px-2 text-muted">Danna Paola</p></li>
+      <li><p class="nav-link px-2 text-muted">Daniel Garcia</p></li>
+      <li><p class="nav-link px-2 text-muted">Camilo Duarte</p></li>
+      <li><p class="nav-link px-2 text-muted">Marlon Herrera</p></li>
+    </ul>
+      <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
+    </footer>
+
+    <section class="section d-flex justify-content-center mt-5" id="section-perfil">
+        <div class="w-100 d-flex justify-content-center">
+          <div class="card-header pt-5">
+            <img
+                class="doctor"
+                src="assets/img/admin.png"
+                alt="doctor"
+              />
+          </div>
+          <div class="card-body">
+            <form class="px-4">
+              <div class="row g-2">
+              <div class="col-md">
+                <label id="cedula_admin" class="mb-2" for="floatingInputGrid">Cédula del administrador</label>
+                    <input type="text" class="form-control p-1" id="floatingInputGrid" readonly>
+              <div class="row g-2">
+              <div class="col-md">
+                <label id="nombre_admin" class="mb-2 mt-2" for="floatingInputGrid">Nombre del administrador</label>
+                    <input type="text" class="form-control p-1" id="floatingInputGrid" readonly>
+              </div>
+                  <div class="col-md">
+                      <br>
+                      <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                                                    class="editar"
+                                                    src="assets/img/lapiz.png"
+                                                    alt="doctor"
+                        /></button>
+                  </div>
+              </div>
+              <div class="row g-2">
+              <div class="col-md">
+                <label id="correo_admin" class="mb-2 mt-2" for="floatingInputGrid">Correo electronico</label>
+                    <input type="email" class="form-control p-1" id="floatingInputGrid" readonly>
+              </div>
+                  <div class="col-md">
+                      <br>
+                      <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                                                    class="editar"
+                                                    src="assets/img/lapiz.png"
+                                                    alt="doctor"
+                        /></button>
+                  </div>
+              </div>
+              <div class="row g-2">
+              <div class="col-md">
+                <label id="celular_admin" class="mb-2 mt-2" for="floatingInputGrid">Celular</label>
+                    <input type="text" class="form-control p-1" id="floatingInputGrid" readonly>
+              </div>
+                  <div class="col-md">
+                      <br>
+                      <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                                                    class="editar"
+                                                    src="assets/img/lapiz.png"
+                                                    alt="doctor"
+                        /></button>
+                  </div>
+              </div>
+            </form>
+          </div>
+    </section>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/limpiar.js"></script>
+    <script src="../sw/dist/sweetalert2.min.js"></script>
+    <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
+  </body>
+</html>
