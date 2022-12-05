@@ -93,3 +93,76 @@ body{
   color: #e4f4fd;
 }
 
+/* styles of form validate password reset */
+
+.bodyV{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #409dc4;
+  
+}
+
+.title{
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+
+.container{
+  width: 500px;
+  padding: 20px;
+  margin: auto;
+  background: white;
+}
+
+.caption{
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.login_box input[type="number"]{
+  width: 90%;
+  border: none;
+  background: none;
+  border-bottom: solid white 1px;
+  padding: 15px;
+  outline: none;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.input_cc:focus{
+  border-bottom: solid #409dc4;
+}
+
+.form__button{
+  display: flex;
+  justify-content: space-between;
+}
+
+.exit{
+  text-decoration: none;
+  background: rgb(221, 1, 1);
+  padding: 5px 20px;
+  color: white;
+  font-size: 14px;
+}
+
+.exit:hover{
+  background: red;
+}
+
+.send{
+  background: green;
+  padding: 8px 15px;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sed.hover{
+  background: rgb(0, 85, 0);
+}
