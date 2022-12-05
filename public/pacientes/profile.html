@@ -135,10 +135,7 @@
       class="section d-flex justify-content-center"
       id="section-perfil"
     ></section>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/funciones.js"></script>
-    <script src="./assets/js/script.js"></script><s
-    <script src="../sw/dist/sweetalert2.min.js"></script>
+
 
     <!-- seccion de muestra de datos -->
 
@@ -166,11 +163,11 @@
             </div>
             <div class="col-1 col-sm-1">
               <br>
-              <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
-                                            class="editar"
-                                            src="assets/img/lapiz.png"
-                                            alt="paciente"
-                /></button>
+              <button class="mt-3" style="right: 50px; border: 0;" id="unames"><img style="width: 30px; height: 30px;"
+                                                    class="editar"
+                                                    src="assets/img/lapiz.png"
+                                                    alt="doctor"
+                        /></button>
           </div>
             </div>
 
@@ -181,7 +178,7 @@
               </div>
               <div class="col-1 col-sm-1">
                 <br>
-                <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                <button id="uemail" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
                                               class="editar"
                                               src="assets/img/lapiz.png"
                                               alt="paciente"
@@ -193,7 +190,7 @@
               </div>
               <div class="col-1 col-sm-1">
                 <br>
-                <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                <button id="uphone" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
                                               class="editar"
                                               src="assets/img/lapiz.png"
                                               alt="paciente"
@@ -208,7 +205,7 @@
                 </div>
                 <div class="col-6 col-sm-6">
                   <label  class="mb-2 mt-2" for="birth">Fecha de nacimiento</label>
-                    <input type="date" class="form-control p-1" id="birth" readonly>
+                    <input type="date" class="form-control p-1" id="birth" >
                 </div>
                 </div>
 
@@ -219,7 +216,7 @@
                   </div>
                   <div class="col-1 col-sm-1">
                     <br>
-                    <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                    <button id="uheight" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
                                                   class="editar"
                                                   src="assets/img/lapiz.png"
                                                   alt="paciente"
@@ -231,17 +228,21 @@
                   </div>
                   <div class="col-1 col-sm-1">
                     <br>
-                    <button class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
+                    <button id="uweight" class="mt-3" style="right: 50px; border: 0;"><img style="width: 30px; height: 30px;"
                                                   class="editar"
                                                   src="assets/img/lapiz.png"
                                                   alt="paciente"
                       /></button>
                 </div>
                   </div>
+                  <br><br>
+                  <button type="button" id="buttonUpdate" class="login_box">Guardar</button>
           </form>
         </div>
   </section>
-
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/scriptprofile.js"></script>
+    <script src="../sw/dist/sweetalert2.min.js"></script>
 
   <footer class="" id="footer">
     <ul class="nav justify-content-center border-bottom">
