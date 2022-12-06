@@ -14,6 +14,7 @@
 let buttonEnviar = document.getElementById('registrationbutton');
 
 buttonEnviar.addEventListener('click', function () {
+  let form = document.getElementById('registrationform');
   let cc = document.getElementById('cc');
   let names = document.getElementById('names');
   let password = document.getElementById('password');
@@ -134,22 +135,22 @@ buttonEnviar.addEventListener('click', function () {
     email.focus();
     return false;
   }
-  function ValidarCorreo(email) {
-    var Regular =
-      /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    var valido = Regular.test(email);
-    if (valido == false) {
-      Swal.fire({
-        icon: 'error',
-        title: 'ERROR!!',
-        text: 'Correo no valido',
-      });
-      email.value = '';
-      email.focus();
-      return false;
-    }
-  }
-  ValidarCorreo(email.value);
+  // function ValidarCorreo(email) {
+  //   var Regular =
+  //     /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  //   var valido = Regular.test(email);
+  //   if (valido == false) {
+  //     Swal.fire({
+  //       icon: 'error',
+  //       title: 'ERROR!!',
+  //       text: 'Correo no valido',
+  //     });
+  //     email.value = '';
+  //     email.focus();
+  //     return false;
+  //   }
+  // }
+  //ValidarCorreo(email.value);
   // if (email.indexOf(@[(1, 12)])) {
   //   Swal.fire({
   //     icon: 'error',
@@ -271,6 +272,12 @@ buttonEnviar.addEventListener('click', function () {
         'Content-Type': 'application/json',
       },
       body: registrationJson,
+    });
+    Swal.fire({
+      icon: 'success',
+      title: 'Validado correctamente!!',
+    }).then(function () {
+      window.location = '/login';
     });
   } else {
     Swal.fire({

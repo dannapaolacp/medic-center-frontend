@@ -1,5 +1,5 @@
 const getUser = async () => {
-  const cedu = 1000;
+  const cedu = 10007;
   const data = await fetch(`http://localhost:3000/api/patient/${cedu}`);
   const patients = await data.json();
   console.log(patients);
@@ -9,6 +9,8 @@ const getUser = async () => {
   let phone = document.getElementById('phone');
   let age = document.getElementById('age');
   let birth = document.querySelector('input[type="date"]');
+  const fecha = patients.birth.split('T');
+  console.table(fecha);
   let weight = document.getElementById('weight');
   let height = document.getElementById('height');
   ced.value = patients.cc;
@@ -16,7 +18,7 @@ const getUser = async () => {
   email.value = patients.email;
   phone.value = patients.phone;
   age.value = patients.age;
-  birth.value = patients.birth;
+  birth.value = fecha[0];
   weight.value = patients.weight;
   height.value = patients.height;
 };
