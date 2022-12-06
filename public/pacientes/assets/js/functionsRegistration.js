@@ -275,7 +275,7 @@ buttonEnviar.addEventListener('click', function () {
     });
     Swal.fire({
       icon: 'success',
-      title: 'Validado correctamente!!',
+      title: 'Se ha creado tu usuario correctamente!!',
     }).then(function () {
       window.location = '/login';
     });

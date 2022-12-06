@@ -181,7 +181,12 @@ buttonUpdate.addEventListener('click', function () {
     weight: weight.value,
     height: height.value,
   };
-
+  Swal.fire({
+    icon: 'success',
+    title: 'Se ha editado los datos del usuario correctamente!!',
+  }).then(function () {
+    window.location = '/pacientes';
+  });
   console.table(registration);
   registrationJson = JSON.stringify(registration);
   console.log(registrationJson);
