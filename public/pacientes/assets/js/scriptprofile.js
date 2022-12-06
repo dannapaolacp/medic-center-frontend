@@ -21,6 +21,8 @@ const getUser = async (cookiecc2) => {
   let phone = document.getElementById('phone');
   let age = document.getElementById('age');
   let birth = document.querySelector('input[type="date"]');
+  const fecha = patients.birth.split('T');
+  console.table(fecha);
   let weight = document.getElementById('weight');
   let height = document.getElementById('height');
   ced.value = patients.cc;
@@ -28,7 +30,7 @@ const getUser = async (cookiecc2) => {
   email.value = patients.email;
   phone.value = patients.phone;
   age.value = patients.age;
-  birth.value = patients.birth;
+  birth.value = fecha[0];
   weight.value = patients.weight;
   height.value = patients.height;
 };
@@ -191,7 +193,12 @@ buttonUpdate.addEventListener('click', function () {
     weight: weight.value,
     height: height.value,
   };
-
+  Swal.fire({
+    icon: 'success',
+    title: 'Se ha editado los datos del usuario correctamente!!',
+  }).then(function () {
+    window.location = '/pacientes';
+  });
   console.table(registration);
   registrationJson = JSON.stringify(registration);
   console.log(registrationJson);
