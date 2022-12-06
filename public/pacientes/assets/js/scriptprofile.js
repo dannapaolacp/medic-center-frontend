@@ -1,6 +1,18 @@
-const getUser = async () => {
-  const cedu = 1000;
-  const data = await fetch(`http://localhost:3000/api/patient/${cedu}`);
+const getCookies = (namess) => {
+  let nameEQ = namess + '=';
+  let ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+};
+
+const cookiecc2 = getCookies('cc');
+
+const getUser = async (cookiecc2) => {
+  const data = await fetch(`http://localhost:3000/api/patient/${cookiecc2}`);
   const patients = await data.json();
   console.log(patients);
   let ced = document.getElementById('cc');
@@ -21,7 +33,7 @@ const getUser = async () => {
   height.value = patients.height;
 };
 
-getUser();
+getUser(cookiecc2);
 
 let btnunames = document.querySelector('#unames');
 let names = document.querySelector('#names');
