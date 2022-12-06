@@ -148,27 +148,27 @@
             </div>
               <div class="">
                 <h5 class="px-5 mt-1" style="font-weight: bold; text-align: center;">Informacion Personal</h5>
-                <form class="needs-validation px-5" novalidate>
+                <form class="needs-validation px-5" id="registrationform">
                   <div class="row g-3">
                     <div class="col-sm-6">
-                      <label for="lastName" class="form-label" style="font-weight: bold;"># tarjeta profecional</label>
-                      <input type="text" class="form-control" id="Numtarjeta" required>
+                      <label for="cc" class="form-label" style="font-weight: bold;"># tarjeta profecional</label>
+                      <input type="number" class="form-control" id="cc" required>
                     </div>
                     <div class="col-sm-6">
-                      <label for="firstName" class="form-label" style="font-weight: bold;">Nombre completo</label>
-                      <input type="text" class="form-control" id="Nombre" required>
+                      <label for="names" class="form-label" style="font-weight: bold;">Nombre completo</label>
+                      <input type="text" class="form-control" id="names" >
                     </div>
                     <div class="col-sm-6 mt-2">
                       <label for="email" class="form-label" style="font-weight: bold;">Correo</label>
-                      <input type="email" class="form-control" id="email" required>
+                      <input type="email" class="form-control" id="email">
                     </div>
                     <div class="col-sm-6 mt-2">
-                      <label for="lastName" class="form-label" style="font-weight: bold;">Telefono</label>
-                      <input type="text" class="form-control" id="Telefono" required>
+                      <label for="phone" class="form-label" style="font-weight: bold;">Telefono</label>
+                      <input type="number" class="form-control" id="phone">
                     </div>
                     <div class="col-sm-6">
-                      <label for="country" class="form-label" style="font-weight: bold;">Seleccione especialidad</label>
-                      <select class="form-select" id="Selec_especialidad" required>
+                      <label for="speciality" class="form-label" style="font-weight: bold;">Seleccione especialidad</label>
+                      <select class="form-select" id="speciality">
                         <option>Seleccione</option>
                         <option value="pediatria">Pediatria</option>
                         <option value="medicina interna">Medicina interna</option>
@@ -184,16 +184,16 @@
                     </div>
                     <h5 class="mb-1" style="font-weight: bold; text-align: center;">Contraseña</h5>
                     <div class="col-sm-6 mt-1">
-                      <label for="address" class="form-label" style="font-weight: bold;">Contraseña</label>
-                      <input type="password" class="form-control" id="contraseña1"  required>
+                      <label for="password" class="form-label" style="font-weight: bold;">Contraseña</label>
+                      <input type="password" class="form-control" id="password">
                     </div>
                     <div class="col-sm-6 mt-1">
-                      <label for="address2" class="form-label" style="font-weight: bold;">Repita la Contraseña</label>
-                      <input type="password" class="form-control" id="contraseña2">
+                      <label for="passwordConfirm" class="form-label" style="font-weight: bold;">Repita la Contraseña</label>
+                      <input type="password" class="form-control" id="passwordConfirm">
                     </div>
                     <div class="col-sm-6 mt-2">
-                      <label for="country" class="form-label" style="font-weight: bold;">Preguntas de seguridad</label>
-                      <select class="form-select" id="Selec_seguridad" required>
+                      <label for="answer" class="form-label" style="font-weight: bold;">Pregunta de seguridad:</label>
+                      <select class="form-select" id="answer">
                         <option>Seleccione la pregunta de seguridad</option>
                         <option value="Nom_primera_m">Nombre de la primera mascota</option>
                         <option value="Equipo_fut">Equipo favorito de futbol</option>
@@ -201,12 +201,12 @@
                       </select>
                     </div>
                     <div class="col-sm-6 mt-2">
-                       <label for="country" class="form-label" style="font-weight: bold;">Respuesta pregunta de seguridad:</label>
-                      <input type="text" class="form-control" id="Result_select_seguridad_Medico"  required>
+                       <label for="response" class="form-label" style="font-weight: bold;">Respuesta pregunta de seguridad:</label>
+                      <input type="text" class="form-control" id="response">
                     </div>
                   </div>
                   <div class="d-flex justify-content-center mt-3">
-                  <button id="registromedico" class="w-50 btn btn-danger btn-lg " type="submit">Registrar</button>
+                  <button id="registrationbutton" class="w-50 btn btn-danger btn-lg " type="submit">Registrar</button>
                   </div>
                 </form>
               </div>
@@ -220,6 +220,7 @@
     ></script> -->
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/limpiar.js"></script>
+    <script src="./assets/js/functionscrear.js"></script>
     <script src="./assets/js/registromedico.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
     <!--<script src="../js/jquery-3.6.1.min.js"></script>-->

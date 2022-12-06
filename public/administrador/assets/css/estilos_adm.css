@@ -136,7 +136,7 @@ footer {
   position: absolute;
   top: 5px;
   right: 160px;
-  width: 53%;
+  width: 55%;
   padding-bottom: 5px;
   background-color: #ededed;
 }
@@ -146,9 +146,9 @@ footer {
 }
 
 .sectioncrear input{
-  width: 300px;
+  width: 315px;
 }
 .sectioncrear select {
-  width: 300px;
+  width: 315px;
 }
 
