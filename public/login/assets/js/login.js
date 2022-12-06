@@ -19,11 +19,8 @@ buttonLogin.addEventListener('click', async (event) => {
       body: loginJson,
     });
     const logins = await data.json();
-    let logincedula = await getUser();
-
-    function cedulaLogeo(loginced) {
-      document.cookie = `cc = ${logincedula};max-age=3600;path=/pacientes`;
-    }
+    let logincedula = logins.id;
+    console.log(logincedula);
 
     if (logins.role === 'administrator') {
       Swal.fire({
@@ -31,6 +28,10 @@ buttonLogin.addEventListener('click', async (event) => {
         title: 'Validado correctamente!!',
       }).then(function () {
         window.location = '/administrador';
+        function cedulaLogeo(loginced) {
+          document.cookie = `cc = ${loginced};max-age=3600;path=/administrador`;
+        }
+        cedulaLogeo(logincedula);
       });
     } else if (logins.role === 'medic') {
       Swal.fire({
@@ -38,6 +39,10 @@ buttonLogin.addEventListener('click', async (event) => {
         title: 'Validado correctamente!!',
       }).then(function () {
         window.location = '/medicos';
+        function cedulaLogeo(loginced) {
+          document.cookie = `cc = ${loginced};max-age=3600;path=/medicos`;
+        }
+        cedulaLogeo(logincedula);
       });
     } else if (logins.role == 'patient') {
       Swal.fire({
@@ -45,6 +50,10 @@ buttonLogin.addEventListener('click', async (event) => {
         title: 'Validado correctamente!!',
       }).then(function () {
         window.location = '/pacientes';
+        function cedulaLogeo(loginced) {
+          document.cookie = `cc = ${loginced};max-age=3600;path=/pacientes`;
+        }
+        cedulaLogeo(logincedula);
       });
     } else {
       Swal.fire({
@@ -52,6 +61,6 @@ buttonLogin.addEventListener('click', async (event) => {
         title: 'No se encontraron datos relacionados pruebe nuevamente!!',
       });
     }
-    cedulaLogeo(logincedula);
   };
+  getUser();
 });
