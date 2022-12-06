@@ -10,24 +10,26 @@ const getCookies = (namess) => {
 };
 
 const cookiecc2 = getCookies('cc');
-console.log(cookiecc2);
+
 const getUser = async () => {
-  const data = await fetch(`http://localhost:3000/api/medic/${cookiecc2}`);
-  const medic = await data.json();
-  console.log(medic);
+  const data = await fetch(`http://localhost:3000/api/admin/${cookiecc2}`);
+  const admin = await data.json();
+  console.log(admin);
   let ced = document.getElementById('cedula');
   let names = document.getElementById('names');
   let email = document.getElementById('email');
   let phone = document.getElementById('phone');
-  let speciality = document.getElementById('specialty');
-  ced.value = medic.cc;
-  names.value = medic.name;
-  email.value = medic.email;
-  phone.value = medic.phone;
-  speciality.value = medic.role;
+  ced.value = admin.cc;
+  names.value = admin.name;
+  email.value = admin.email;
+  phone.value = admin.phone;
 };
 
 getUser();
+
+// $('#reporte_paciente,#reporte_medico').click(function () {
+//   $('#carusel').remove();
+// });
 
 let btneditar = document.querySelector('#editar');
 let input = document.querySelector('#names');
@@ -55,7 +57,7 @@ let registration;
 let registrationJson;
 
 const udpateUser = async () => {
-  const data = await fetch(`http://localhost:3000/api/medic/${cookiecc2}`, {
+  const data = await fetch(`http://localhost:3000/api/admin/${cookiecc2}`, {
     method: 'put',
     body: registrationJson,
     headers: {
@@ -119,7 +121,7 @@ buttonUpdate.addEventListener('click', function () {
     icon: 'success',
     title: 'Se ha editado los datos del usuario correctamente!!',
   }).then(function () {
-    window.location = '/medicos';
+    window.location = '/administrador';
   });
   console.table(registration);
   registrationJson = JSON.stringify(registration);
