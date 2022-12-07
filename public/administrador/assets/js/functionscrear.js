@@ -8,6 +8,8 @@ buttonEnviar.addEventListener('click', function (event) {
   let email = document.getElementById('email');
   let phone = document.getElementById('phone');
   let speciality = document.getElementById('speciality');
+  let selectedOption = speciality.options[speciality.selectedIndex];
+  console.log(selectedOption.value);
   let password = document.getElementById('password');
   let passwordConfirm = document.getElementById('passwordConfirm');
   let answer = document.getElementById('answer');
@@ -157,15 +159,16 @@ buttonEnviar.addEventListener('click', function (event) {
       password: password.value,
       phone: phone.value,
       email: email.value,
-      answer: answer.value,
-      response: response.value,
+      specialityTitle: selectedOption.value,
+      // answer: answer.value,
+      // response: response.value,
     };
 
     console.table(registration);
     let registrationJson = JSON.stringify(registration);
     console.log(registrationJson);
 
-    fetch('http://localhost:3000/api/patients', {
+    fetch('http://localhost:3000/api/medics', {
       method: 'Post',
       headers: {
         'Content-Type': 'application/json',
