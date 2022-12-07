@@ -1,0 +1,21 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+h1{
+  font-family: 'Libre Baskerville', serif;
+  font-weight: bold;
+}
+h2{
+  padding: 15px 0;
+  font-size: 3rem;
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+
+}
+.li-services{
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 1.5rem 5rem;
+}
