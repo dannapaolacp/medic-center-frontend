@@ -24,7 +24,7 @@ const getUser = async () => {
   names.value = medic.name;
   email.value = medic.email;
   phone.value = medic.phone;
-  speciality.value = medic.role;
+  speciality.value = medic.speciality;
 };
 
 getUser();
@@ -93,7 +93,7 @@ buttonUpdate.addEventListener('click', function () {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar su telefono correctamente',
     });
     phone.value = '';
     phone.focus();

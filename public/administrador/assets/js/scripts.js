@@ -17,7 +17,6 @@ buttonDeleteMedics.addEventListener('click', function (event) {
 buttonDeletePacients.addEventListener('click', function (event) {
   event.preventDefault();
   let cc = document.getElementById('cc');
-  console.log(cc.value);
   fetch(`http://localhost:3000/api/patient/${cc.value}`, {
     method: 'DELETE',
   });
