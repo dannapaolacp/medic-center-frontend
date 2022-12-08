@@ -80,6 +80,17 @@ buttonUpdate.addEventListener('click', function () {
     names.focus();
     return false;
   }
+  const patternn = new RegExp('^[A-Z ]+$', 'i');
+  if (!patternn.test(names.value)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'ERROR!!',
+      text: 'No debe tener numeros ni caracteres especiales en el nombre',
+    });
+    names.value = '';
+    names.focus();
+    return false;
+  }
   if (phone.value == 0) {
     Swal.fire({
       icon: 'error',
