@@ -134,7 +134,7 @@ buttonEnviar.addEventListener('click', function () {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar un numero de telefono correctamente',
     });
     phone.value = '';
     phone.focus();
