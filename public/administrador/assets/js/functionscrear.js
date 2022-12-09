@@ -65,14 +65,13 @@ buttonEnviar.addEventListener('click', function (event) {
     email.focus();
     return false;
   }
-  const expReg =
-    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-  const esValido = expReg.test(email.value);
-  if (esValido == false) {
+  let Regular = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  const valido = Regular.test(email.value);
+  if (valido == false) {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar un correo valido',
+      text: 'Correo no valido',
     });
     email.value = '';
     email.focus();
