@@ -172,8 +172,8 @@ buttonEnviar.addEventListener('click', function (event) {
       phone: phone.value,
       email: email.value,
       specialityTitle: selectedOption.value,
-      // answer: answer.value,
-      // response: response.value,
+      question: answer.value,
+      answer: response.value,
     };
 
     console.table(registration);

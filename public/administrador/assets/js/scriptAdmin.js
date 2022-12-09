@@ -67,7 +67,7 @@ const udpateUser = async () => {
 };
 
 buttonUpdate.addEventListener('click', function () {
-  let cc = document.getElementById('cc');
+  let cc = document.getElementById('cedula');
   let names = document.getElementById('names');
   let phone = document.getElementById('phone');
   let email = document.getElementById('email');
@@ -136,9 +136,23 @@ buttonUpdate.addEventListener('click', function () {
   }
 
   registration = {
+    cc: cc.value,
     name: names.value,
     phone: phone.value,
     email: email.value,
+  };
+  console.table(registration);
+  registrationJson = JSON.stringify(registration);
+  console.log(registrationJson);
+  const udpateUser = async () => {
+    console.log('EN fun', registrationJson);
+    const data = await fetch(`http://localhost:3000/api/admin/${cookiecc2}`, {
+      method: 'put',
+      body: registrationJson,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   };
   Swal.fire({
     icon: 'success',
@@ -146,8 +160,6 @@ buttonUpdate.addEventListener('click', function () {
   }).then(function () {
     window.location = '/administrador';
   });
-  console.table(registration);
-  registrationJson = JSON.stringify(registration);
-  console.log(registrationJson);
+
   udpateUser();
 });
