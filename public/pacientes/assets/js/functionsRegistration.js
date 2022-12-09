@@ -151,23 +151,23 @@ buttonEnviar.addEventListener('click', function () {
     return false;
   }
 
-  function ValidarCorreo(email) {
-    const Regular =
-      /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    const valido = Regular.test(email.value);
-    if (valido == false) {
-      Swal.fire({
-        icon: 'error',
-        title: 'ERROR!!',
-        text: 'Correo no valido',
-      });
-      email.value = '';
-      email.focus();
-      return false;
-    }
-  }
+  // function ValidarCorreo(email) {
+  //   const Regular =
+  //     /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  //   const valido = Regular.test(email.value);
+  //   if (valido == false) {
+  //     Swal.fire({
+  //       icon: 'error',
+  //       title: 'ERROR!!',
+  //       text: 'Correo no valido',
+  //     });
+  //     email.value = '';
+  //     email.focus();
+  //     return false;
+  //   }
+  // }
 
-  ValidarCorreo(email.value);
+  // ValidarCorreo(email.value);
 
   if (weight.value == 0) {
     Swal.fire({
@@ -266,8 +266,8 @@ buttonEnviar.addEventListener('click', function () {
       weight: weight.value,
       height: height.value,
       birth: birth.value,
-      answer: answer.value,
-      response: response.value,
+      question: answer.value,
+      answer: response.value,
     };
 
     console.table(registration);
