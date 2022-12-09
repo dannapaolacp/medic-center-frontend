@@ -65,6 +65,19 @@ buttonEnviar.addEventListener('click', function (event) {
     email.focus();
     return false;
   }
+  const expReg =
+    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  const esValido = expReg.test(email.value);
+  if (esValido == false) {
+    Swal.fire({
+      icon: 'error',
+      title: 'ERROR!!',
+      text: 'Debe insertar un correo valido',
+    });
+    email.value = '';
+    email.focus();
+    return false;
+  }
   if (phone.value == 0) {
     Swal.fire({
       icon: 'error',
