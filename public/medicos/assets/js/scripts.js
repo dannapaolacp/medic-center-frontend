@@ -120,7 +120,18 @@ buttonUpdate.addEventListener('click', function () {
     email.focus();
     return false;
   }
-
+  let Regular = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  const valido = Regular.test(email.value);
+  if (valido == false) {
+    Swal.fire({
+      icon: 'error',
+      title: 'ERROR!!',
+      text: 'Correo no valido',
+    });
+    email.value = '';
+    email.focus();
+    return false;
+  }
   registration = {
     name: names.value,
     phone: phone.value,

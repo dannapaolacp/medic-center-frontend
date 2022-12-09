@@ -150,25 +150,18 @@ buttonEnviar.addEventListener('click', function () {
     email.focus();
     return false;
   }
-
-  // function ValidarCorreo(email) {
-  //   const Regular =
-  //     /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-  //   const valido = Regular.test(email.value);
-  //   if (valido == false) {
-  //     Swal.fire({
-  //       icon: 'error',
-  //       title: 'ERROR!!',
-  //       text: 'Correo no valido',
-  //     });
-  //     email.value = '';
-  //     email.focus();
-  //     return false;
-  //   }
-  // }
-
-  // ValidarCorreo(email.value);
-
+  let Regular = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  const valido = Regular.test(email.value);
+  if (valido == false) {
+    Swal.fire({
+      icon: 'error',
+      title: 'ERROR!!',
+      text: 'Correo no valido',
+    });
+    email.value = '';
+    email.focus();
+    return false;
+  }
   if (weight.value == 0) {
     Swal.fire({
       icon: 'error',
