@@ -259,8 +259,8 @@ buttonEnviar.addEventListener('click', function () {
       weight: weight.value,
       height: height.value,
       birth: birth.value,
-      answer: answer.value,
-      response: response.value,
+      question: answer.value,
+      answer: response.value,
     };
 
     console.table(registration);
