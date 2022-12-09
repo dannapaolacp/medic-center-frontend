@@ -167,7 +167,7 @@ buttonEnviar.addEventListener('click', function (event) {
   }
   if (password.value === passwordConfirm.value) {
     let registration = {
-      cc: cc.value,
+      cc: Number(cc.value),
       name: names.value,
       password: password.value,
       phone: phone.value,

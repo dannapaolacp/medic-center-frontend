@@ -1,164 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--favicon-->
-  <link rel="icon" type="image/x-icon" href="./assets/img/medicina.png">
-   <!-- Bootstrap -->
-   <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" >
-   <!--iconos de boot-->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="./assets/img/medicina.png" />
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--iconos de boot-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
     <!--google fonts-->
-   <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Libre+Baskerville&display=swap" rel="stylesheet">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <title>Medic Center</title>
-</head>
-<body >
-  <!--Barra de navegacion-->
-  <nav class="navbar navbar-expand-md navbar-light" style="margin-top: 3px;" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" style="border: radius 2px;">
-        <img src="./assets/img/medicina.png" alt="Logo de la clinica" width="30" height="24" class="d-inline-block align-text-top">
-    </a>
-    <ul class="nav col-12 col-lg-4 me-lg-auto mb-2 justify-content-center mb-md-0 " >
-      <li><a href="#Servicios" class="nav-link px-2 link-secondary">Servicios</a></li>
-      <li><a href="#Profesionales" class="nav-link px-2 link-dark">Profesionales</a></li>
-    </ul>
-    <ul style="width: 10px;"></ul>
-    <ul class="navbar-nav col-lg-6  me-lg-auto mb-2  mb-md-0" >
-      <p><h2 style="font-family: 'Libre Baskerville', serif;">MEDIC CENTER</h2></p>
-    </ul>
-        <ul class="navbar-nav d-flex justify-content-center align-items-center" > <!--alineado en los ejes-->
-          <a href="./login/" style="color: white;">
-            <button type="button" class="btn btn-outline-primary" width="30" height="24" style="text-align:right">Ingresar</button>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo&family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Medic Center</title>
+  </head>
+  <body>
+    <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-md navbar-light" style="margin-top: 3px">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="border: radius 2px">
+          <img
+            src="./assets/img/medicina.png"
+            alt="Logo de la clinica"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <ul
+          class="nav col-12 col-lg-4 me-lg-auto mb-2 justify-content-center mb-md-0"
+        >
+          <li>
+            <a href="#Profesionales" class="nav-link px-2 link-dark"
+              >Profesionales</a
+            >
+          </li>
+          <li>
+            <a href="#Servicios" class="nav-link px-2 link-secondary"
+              >Servicios</a
+            >
+          </li>
+        </ul>
+        <ul style="width: 10px"></ul>
+        <ul class="navbar-nav col-lg-6 me-lg-auto mb-2 mb-md-0">
+          <h1>MEDIC CENTER</h1>
+        </ul>
+        <ul class="navbar-nav d-flex justify-content-center align-items-center">
+          <!--alineado en los ejes-->
+          <a href="./login/" style="color: white">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              width="30"
+              height="24"
+              style="text-align: right"
+            >
+              Ingresar
+            </button>
+          </a>
+        </ul>
+      </div>
+    </nav>
+    <!-- Novedades -->
+    <section
+      id="novedades"
+      style="padding: 20px 20px 40px 20px; background-color: #66b2ff"
+    >
+      <h2>Novedades</h2>
+      <!--Carrusel-->
+      <div
+        id="carousel_Novedades"
+        class="carousel carousel-dark slide"
+        data-bs-ride="true"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carousel_Novedades"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel_Novedades"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel_Novedades"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container" style="align-content: space-around">
+              <img
+                src="./assets/img/Clinica.jpg"
+                alt="Clinica"
+                style="height: 450px; width: 100%; display: block; float: left"
+              />
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <p style="color: white; font-size: 3em; font-weight: bold">
+                NUEVA SEDE
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container" style="align-content: space-around">
+              <img
+                src="./assets/img/recep.jpeg"
+                alt="recep"
+                style="height: 450px; width: 100%; display: block; float: left"
+              />
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color: white; font-size: 2em; font-weight: bold">
+                ATENCIÓN DE CALIDAD
+              </h5>
+              <p style="color: white; font-size: 1.5em; font-weight: bold">
+                Ven visitanos
+              </p>
+            </div>
+          </div>
+          <!--float: left;-->
+          <div class="carousel-item">
+            <div class="container" style="align-content: space-around">
+              <img
+                src="./assets/img/quiro1.jpg"
+                alt="quiro"
+                style="height: 450px; width: 100%; display: block; float: left"
+              />
+            </div>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color: white; font-size: 2em; font-weight: bold">
+                NUESTRAS INSTALACIONES
+              </h5>
+              <p style="color: white; font-size: 1.5em; font-weight: bold">
+                Contamos con la mejor tecnología en procedimientos quirúrgicos
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel_Novedades"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel_Novedades"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+    <!-- Doctores -->
+    <section
+      id="Profesionales"
+      class="justify-content-start"
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        padding: 30px;
+        background-color: #66b2ff;
+      "
+    >
+      <h2>Nuestros Profesionales</h2>
+
+      <!-- Galeria de Doctores -->
+      <div class="container text-center">
+        <div class="row">
+          <!-- Doctor 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div style="position: relative">
+              <img
+                src="./assets/img/Doc2.jpg"
+                alt="Doctor 1"
+                style="height: 450px; width: 90%"
+              />
+            </div>
+          </div>
+          <!-- Doctor 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div style="position: relative">
+              <img
+                src="./assets/img/Doc11.jpg"
+                alt="Doctor 2"
+                style="height: 450px; width: 90%"
+              />
+            </div>
+          </div>
+          <!-- Doctor 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div style="position: relative">
+              <img
+                src="./assets/img/Doc3.jpg"
+                alt="Doctor 3"
+                style="height: 450px; width: 90%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Servicios-->
+    <section
+      id="Servicios"
+      class="justify-content-start"
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        padding: 30px;
+        background-color: #66b2ff;
+      "
+    >
+      <h2
+        style="
+          padding: 15px 0;
+          font-size: 3rem;
+          font-family: 'Share Tech Mono', monospace;
+        "
+      >
+        Servicios
+      </h2>
+      <h3 style="font-size: 1.5rem; color: #584e4e" class="text-center">
+        Medic Center es una entidad especializada en la atención a domicilio
+        <br />
+        y ofrece las siguientes especialidades:
+      </h3>
+      <br />
+      <div class="card">
+        <ul
+          class="list-group list-group-flush"
+          style="font-family: 'Share Tech Mono'"
+        >
+          <li class="list-group-item li-services">Pediatria</li>
+          <li class="list-group-item li-services">Medicina Interna</li>
+          <li class="list-group-item li-services">Urologia</li>
+          <li class="list-group-item li-services">Neurologia</li>
+          <li class="list-group-item li-services">Hematologia</li>
+          <li class="list-group-item li-services">Hepatologia</li>
+          <li class="list-group-item li-services">Ginecologia</li>
+          <li class="list-group-item li-services">Neumologia</li>
+          <li class="list-group-item li-services">Cardiologia</li>
+          <li class="list-group-item li-services">Psiquiatria</li>
+        </ul>
+      </div>
+      <br />
+      <br />
+      <!--Footer-->
+      <div class="container">
+        <footer
+          class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        >
+          <p class="col-md-4 mb-0 text-muted">
+            Desarrollado por: Estudiantes Universidad Distrital Francisco José
+            de Caldas
+          </p>
+          <a
+            href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+          >
+            <img
+              src="./assets/img/medicina.png"
+              alt="clini"
+              class="bi me-2"
+              width="60"
+              height="52"
+            />
           </a>
 
-        </ul>
-    </div>
-  </nav>
-  <!-- Novedades -->
-  <section id="novedades" style=" padding: 20px 20px 40px 20px;background-color:#66B2FF ;" >
-    <h2 style="font-size: 2rem; padding: 15px;font-family: 'Share Tech Mono', monospace;">NOVEDADES</h2>
-            <!--Carrusel-->
-            <div id="carousel_Novedades" class="carousel carousel-dark slide" data-bs-ride="true">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carousel_Novedades" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel_Novedades" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel_Novedades" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner" >
-                <div class="carousel-item active">
-                  <div class="container" style="align-content: space-around;">
-                    <img  src="./assets/img/Clinica.jpg" alt="Clinica" style="height: 450px;width:100%;display: block;float: left;" >
-                  </div>
-                  <div class="carousel-caption d-none d-md-block">
-                    <p style="color: white;font-size: 3em;font-weight: bold;">NUEVA SEDE</p>
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+              <a
+                href="http://www1.udistrital.edu.co:8080/es/web/facultad-tecnologica"
+                class="nav-link px-2 text-muted"
+                >Encuentranos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-muted"
+                ><i class="bi bi-geo-alt">Calle 68D Bis A sur # 49F-70</i></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-muted"
+                ><i class="bi bi-whatsapp">Contactanos 31355619 </i></a
+              >
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </section>
 
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="container" style="align-content: space-around;">
-                    <img  src="./assets/img/recep.jpeg" alt="recep" style="height: 450px;width:100%;display: block;float: left;" >
-                  </div>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: white;font-size: 2em;font-weight: bold;">ATENCIÓN DE CALIDAD</h5>
-                    <p style="color: white;font-size: 1.5em;font-weight: bold;" >Ven visitanos </p>
-                  </div>
-                </div>
-                <!--float: left;-->
-                <div class="carousel-item">
-                  <div class="container" style="align-content: space-around;">
-                    <img  src="./assets/img/quiro1.jpg" alt="quiro" style="height: 450px;width:100%;display: block;float: left;" >
-                  </div>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h5 style="color: white;font-size: 2em;font-weight: bold;">NUESTRAS INSTALACIONES</h5>
-                    <p style="color: white;font-size: 1.5em;font-weight: bold;" >Contamos con la mejor tecnología en procedimientos quirúrgicos</p>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel_Novedades" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel_Novedades" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
-            </div>
-  </section>
-  <!-- Doctores -->
-  <section id="Profesionales" class="justify-content-start" style="display: flex;flex-direction: column;align-items: center;justify-content: center;min-height: 500px;padding: 30px;background-color:#66B2FF ;">
-    <h2 style="padding: 15px 0;font-size: 3rem;font-family: 'Share Tech Mono', monospace;">Nuestros Profesionales</h2>
-
-    <!-- Galeria de Doctores -->
-    <div class="container text-center ">
-      <div class="row">
-
-
-        <!-- Doctor 1 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div style="position: relative;">
-            <img src="./assets/img/Doc2.jpg" alt="Doctor 1" style="height:450px ;width: 90%;">
-          </div>
-        </div>
-        <!-- Doctor 2 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div style="position: relative;">
-            <img src="./assets/img/Doc11.jpg" alt="Doctor 2" style="height:450px ;width: 90%;">
-          </div>
-        </div>
-        <!-- Doctor 3 -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div style="position: relative;">
-            <img src="./assets/img/Doc3.jpg" alt="Doctor 3" style="height:450px ;width: 90%;">
-          </div>
-        </div>
-        </div>
-        </div>
-</section>
-  <!--Servicios-->
-  <section id="Servicios" class="justify-content-start" style="display: flex;flex-direction: column;align-items: center;justify-content: center;min-height: 500px;padding: 30px;background-color:#66B2FF ;">
-    <h2 style="padding: 15px 0;font-size: 3rem;font-family: 'Share Tech Mono', monospace;">Servicios</h2>
-    <h3 style="font-size: 1.5rem;color: #584e4e;"class="text-center">Medic Center es una entidad especializada en la atención a domicilio <br> y ofrece las siguientes especialidades: </h3>
-    <br>
-    <div class="card">
-      <ul class="list-group list-group-flush" style="font-family: 'Share Tech Mono'">
-        <li class="list-group-item" style="font-family: 'Share Tech Mono'">
-          Medicina General
-        </li>
-        <li class="list-group-item" style="font-family: 'Share Tech Mono'">
-          Odontología
-        </li>
-          <li class="list-group-item">
-            Dermatología Oncológica
-          </li>
-          <li class="list-group-item" style="font-family: 'Share Tech Mono'">
-            Atención domiciliaria de pacientes
-          </li>
-      </ul>
-    </div>
-    <br>
-    <br>
-    <!--Footer-->
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">© 2022 UD, Inc</p>
-
-        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          <img src="./assets/img/medicina.png" alt="clini"class="bi me-2" width="60" height="52">
-        </a>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="http://www1.udistrital.edu.co:8080/es/web/facultad-tecnologica" class="nav-link px-2 text-muted">Encuentranos</a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-geo-alt">Calle 68D Bis A sur # 49F-70</i></a></li>
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><i class="bi bi-whatsapp">Contactanos 31355619 </i></a></li>
-        </ul>
-      </footer>
-    </div>
-  </section>
-
-  <script src="bootstrap/js/bootstrap.bundle.min.js"  ></script>
-</body>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

@@ -22,7 +22,8 @@ buttonEnviar.addEventListener('click', function () {
   let phone = document.getElementById('phone');
   let email = document.getElementById('email');
   let weight = document.getElementById('weight');
-  let age = document.getElementById('age');
+  let height = document.getElementById('height');
+  //let age = document.getElementById('age');
   let birth = document.getElementById('birth');
   let answer = document.getElementById('answer');
   let response = document.getElementById('response');
@@ -46,23 +47,37 @@ buttonEnviar.addEventListener('click', function () {
     cc.focus();
     return false;
   }
-  if (age.value == 0) {
+
+  const Edad = () => {
+    const date = new Date();
+    const actualA = parseInt(date.getFullYear());
+    const actualM = parseInt(date.getMonth() + 1);
+    const actualD = parseInt(date.getDate());
+    //Datos usuario
+    const anoNacimiento = parseInt(String(birth.value).substring(0, 4));
+    const Mes = parseInt(String(birth.value).substring(5, 7));
+    const dia = parseInt(String(birth.value).substring(8, 10));
+
+    let edad = actualA - anoNacimiento;
+    if (actualM < Mes) {
+      edad--;
+    } else if (actualM === Mes) {
+      if (actualD < dia) {
+        edad--;
+      }
+    }
+    return edad;
+  };
+  var a = Edad();
+  console.log(a);
+  if (a <= 1) {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad',
+      text: 'Edad menor a un año',
     });
-    age.value = '';
-    age.focus();
-    return false;
-  } else if (age.value <= 0) {
-    Swal.fire({
-      icon: 'error',
-      title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
-    });
-    age.value = '';
-    age.focus();
+    birth.value = '';
+    birth.focus();
     return false;
   }
   if (names.value == 0) {
@@ -135,32 +150,25 @@ buttonEnviar.addEventListener('click', function () {
     email.focus();
     return false;
   }
-  // function ValidarCorreo(email) {
-  //   var Regular =
-  //     /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-  //   var valido = Regular.test(email);
-  //   if (valido == false) {
-  //     Swal.fire({
-  //       icon: 'error',
-  //       title: 'ERROR!!',
-  //       text: 'Correo no valido',
-  //     });
-  //     email.value = '';
-  //     email.focus();
-  //     return false;
-  //   }
-  // }
-  //ValidarCorreo(email.value);
-  // if (email.indexOf(@[(1, 12)])) {
-  //   Swal.fire({
-  //     icon: 'error',
-  //     title: 'ERROR!!',
-  //     text: 'Email invalido @gmail.com ',
-  //   });
-  //   email.value = '';
-  //   email.focus();
-  //   return false;
-  // }
+
+  function ValidarCorreo(email) {
+    const Regular =
+      /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    const valido = Regular.test(email.value);
+    if (valido == false) {
+      Swal.fire({
+        icon: 'error',
+        title: 'ERROR!!',
+        text: 'Correo no valido',
+      });
+      email.value = '';
+      email.focus();
+      return false;
+    }
+  }
+
+  ValidarCorreo(email.value);
+
   if (weight.value == 0) {
     Swal.fire({
       icon: 'error',
@@ -254,7 +262,7 @@ buttonEnviar.addEventListener('click', function () {
       password: password.value,
       phone: phone.value,
       email: email.value,
-      age: age.value,
+      age: a,
       weight: weight.value,
       height: height.value,
       birth: birth.value,
