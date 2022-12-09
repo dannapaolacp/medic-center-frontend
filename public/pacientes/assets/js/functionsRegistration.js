@@ -152,19 +152,8 @@ buttonEnviar.addEventListener('click', function () {
     }
   }
 
-ValidarCorreo(email);
+  ValidarCorreo(email.value);
 
-  //ValidarCorreo(email.value);
-  // if (email.indexOf(@[(1, 12)])) {
-  //   Swal.fire({
-  //     icon: 'error',
-  //     title: 'ERROR!!',
-  //     text: 'Email invalido @gmail.com ',
-  //   });
-  //   email.value = '';
-  //   email.focus();
-  //   return false;
-  // }
   if (weight.value == 0) {
     Swal.fire({
       icon: 'error',
