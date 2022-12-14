@@ -19,7 +19,7 @@ buttonEnviar.addEventListener('click', function (event) {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su cedula',
+      text: 'Debe insertar su tarjeta profesional',
     });
     cc.value = '';
     cc.focus();
@@ -90,7 +90,7 @@ buttonEnviar.addEventListener('click', function (event) {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar su numero de telefono correctamente',
     });
     phone.value = '';
     phone.focus();
