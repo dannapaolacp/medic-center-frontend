@@ -48,29 +48,29 @@ buttonEnviar.addEventListener('click', function () {
     return false;
   }
 
-  const Edad=()=>{
+  const Edad = () => {
     const date = new Date();
-    const actualA=parseInt(date.getFullYear());
-    const actualM=parseInt(date.getMonth()+1);
-    const actualD=parseInt(date.getDate());
+    const actualA = parseInt(date.getFullYear());
+    const actualM = parseInt(date.getMonth() + 1);
+    const actualD = parseInt(date.getDate());
     //Datos usuario
-    const anoNacimiento=parseInt(String(birth.value).substring(0,4));
-    const Mes=parseInt(String(birth.value).substring(5,7));
-    const dia=parseInt(String(birth.value).substring(8,10));
+    const anoNacimiento = parseInt(String(birth.value).substring(0, 4));
+    const Mes = parseInt(String(birth.value).substring(5, 7));
+    const dia = parseInt(String(birth.value).substring(8, 10));
 
-    let edad=actualA-anoNacimiento;
-    if(actualM<Mes){
+    let edad = actualA - anoNacimiento;
+    if (actualM < Mes) {
       edad--;
-    }else if(actualM===Mes){
-      if(actualD<dia){
+    } else if (actualM === Mes) {
+      if (actualD < dia) {
         edad--;
       }
     }
     return edad;
-  }
-  var a=Edad();
+  };
+  var a = Edad();
   console.log(a);
-  if(a<=1){
+  if (a <= 1) {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
@@ -134,7 +134,7 @@ buttonEnviar.addEventListener('click', function () {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar un numero de telefono correctamente',
     });
     phone.value = '';
     phone.focus();
@@ -150,26 +150,18 @@ buttonEnviar.addEventListener('click', function () {
     email.focus();
     return false;
   }
-
-
-  function ValidarCorreo(email) {
-    let Regular = 
-     /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    const valido = Regular.test(email);
-    if (valido == false) {
-      Swal.fire({
-        icon: 'error',
-        title: 'ERROR!!',
-        text: 'Correo no valido',
-      });
-      email.value = '';
-      email.focus();
-      return false;
-    }
+  let Regular = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  const valido = Regular.test(email.value);
+  if (valido == false) {
+    Swal.fire({
+      icon: 'error',
+      title: 'ERROR!!',
+      text: 'Correo no valido',
+    });
+    email.value = '';
+    email.focus();
+    return false;
   }
-
-ValidarCorreo(email.value);
-
   if (weight.value == 0) {
     Swal.fire({
       icon: 'error',
@@ -267,8 +259,8 @@ ValidarCorreo(email.value);
       weight: weight.value,
       height: height.value,
       birth: birth.value,
-      answer: answer.value,
-      response: response.value,
+      question: answer.value,
+      answer: response.value,
     };
 
     console.table(registration);

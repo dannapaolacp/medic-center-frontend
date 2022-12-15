@@ -19,7 +19,7 @@ buttonEnviar.addEventListener('click', function (event) {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su cedula',
+      text: 'Debe insertar su tarjeta profesional',
     });
     cc.value = '';
     cc.focus();
@@ -65,6 +65,18 @@ buttonEnviar.addEventListener('click', function (event) {
     email.focus();
     return false;
   }
+  let Regular = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  const valido = Regular.test(email.value);
+  if (valido == false) {
+    Swal.fire({
+      icon: 'error',
+      title: 'ERROR!!',
+      text: 'Correo no valido',
+    });
+    email.value = '';
+    email.focus();
+    return false;
+  }
   if (phone.value == 0) {
     Swal.fire({
       icon: 'error',
@@ -78,7 +90,7 @@ buttonEnviar.addEventListener('click', function (event) {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar su numero de telefono correctamente',
     });
     phone.value = '';
     phone.focus();
@@ -160,8 +172,8 @@ buttonEnviar.addEventListener('click', function (event) {
       phone: phone.value,
       email: email.value,
       specialityTitle: selectedOption.value,
-      // answer: answer.value,
-      // response: response.value,
+      question: answer.value,
+      answer: response.value,
     };
 
     console.table(registration);

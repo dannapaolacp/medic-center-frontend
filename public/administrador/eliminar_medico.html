@@ -24,7 +24,7 @@
                 src="assets/img/gerente.png"
                 alt="doctor"
               />
-        <p class="fs-4">Administrador Daniel Garcia</p>
+              <span id="nameProfile" class="fs-4"></span>
       </a>
       <hr />
       <ul class="nav nav-pills flex-column mb-auto">
@@ -139,7 +139,7 @@
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
           <li><button class="dropdown-item w-100" id="perfil" onclick="location.href='./perfil.html'">Perfil</button></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><button class="dropdown-item w-100" id="close">Cerrar Sesión</button></li>
+          <li><button class="dropdown-item w-100" id="close" onclick="location.href='../index.html'">Cerrar Sesión</button></li>
         </ul>
       </div>
     </div>
@@ -168,6 +168,7 @@
     </section>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
+    <script src="./assets/js/cookie.js"></script>
     <script src="./assets/js/scripts.js"></script>
     <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
   </body>
