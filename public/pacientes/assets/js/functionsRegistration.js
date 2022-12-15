@@ -151,10 +151,11 @@ buttonEnviar.addEventListener('click', function () {
     return false;
   }
 
+
   function ValidarCorreo(email) {
-    const Regular =
-      /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    const valido = Regular.test(email.value);
+    let Regular = 
+     /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    const valido = Regular.test(email);
     if (valido == false) {
       Swal.fire({
         icon: 'error',
@@ -167,19 +168,8 @@ buttonEnviar.addEventListener('click', function () {
     }
   }
 
-ValidarCorreo(email);
+ValidarCorreo(email.value);
 
-  //ValidarCorreo(email.value);
-  // if (email.indexOf(@[(1, 12)])) {
-  //   Swal.fire({
-  //     icon: 'error',
-  //     title: 'ERROR!!',
-  //     text: 'Email invalido @gmail.com ',
-  //   });
-  //   email.value = '';
-  //   email.focus();
-  //   return false;
-  // }
   if (weight.value == 0) {
     Swal.fire({
       icon: 'error',
