@@ -144,30 +144,22 @@
     </div>
     <div class="information">
       <div class="head1">Información de sus citas</div>
-      <div class="card-body">
-        <form action="formulario" action="askDate.html" method="post">
+      <div class="card-body">        
           <div class="container">
-            <table id="doctors" class="table table-bordered table-striped">
+            <table id="table-viewDate" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>ID</th>
+                  <th>N°</th>
                   <th>HORA</th>
                   <th>FECHA</th>
-                  <th>TIPO</th>
+                  <th>ESPECIALIDAD</th>
                   <th>DOCTOR</th>
+                  <th>ESTADO</th>
                 </tr>
               </thead>
               <tbody></tbody>
             </table>
-            <div class="col-md-12">
-              <br />
-              <script>
-                // let docs = ["Aron","Simon"];
-                // console.log(docs.legth);
-              </script>
-            </div>
           </div>
-        </form>
       </div>
     </div>
     <footer class="" id="footer">
@@ -189,5 +181,6 @@
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/funciones.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
+    <script src="./assets/js/scriptViewDate.js"></script>
   </body>
 </html>

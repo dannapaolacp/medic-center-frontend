@@ -124,6 +124,24 @@ footer {
   background-color: grey;
 }
 
+.information{
+  background-color: white;
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  right: 85px;
+  margin-top: 50px;
+}
+
+tr{
+  text-align: center;
+}
+
+.head1{
+  background: #4B5CEB;
+  color: white;
+}
+
  /* .editar {
   width: 30px;
   height: 30px;

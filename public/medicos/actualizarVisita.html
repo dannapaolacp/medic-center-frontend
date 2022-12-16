@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial-scale-1.0" />
     <title>Doctor</title>
-    <link rel="icon" type="image/x-icon" href="../assets/img/medicina.png" />
     <link rel="stylesheet" href="assets/css/estilos.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/medicina.png" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
     <script src="../assets/js/jquery-3.6.1.min.js"></script>
@@ -69,7 +69,7 @@
               <li><button class="diseño" id="exportar">Exportar PDF</button></li>
             </ul>
           </div>
-        </li>
+        </li>        
       </ul>
       <hr />
       <div class="dropdown">
@@ -91,8 +91,36 @@
           <li><hr class="dropdown-divider" /></li>
           <li><button onclick="location.href='/login/'" class="dropdown-item w-100" id="close">Cerrar Sesión</button></li>
         </ul>
+      </div>      
+    </div>    
+
+<div class="information">
+    <div class="head1">Información de visitas</div>
+    <div class="card-body">
+      <div class="container">
+        <div class="table-responsive">
+          <table
+            id="table-visits"
+            class="table table-bordered table-striped"
+          >
+            <thead>
+              <tr>
+                <th>Hola mi amor, recuerda que ya falta poco, no te dejes ganar del estres mi cielo</th>                
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="col-md-12">
+            <br />
+          </div>
+        </div>
       </div>
+      <script src="../bootstrap/js/bootstrap.min.js"></script>
+      <script src="../sw/dist/sweetalert2.min.js"></script>
+      <script src="../assets/js/jquery-3.6.1.min.js"></script>
     </div>
+  </div>
+
     <footer class="" id="footer">
     <ul class="nav justify-content-center border-bottom">
       <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
@@ -104,75 +132,7 @@
       <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
     </footer>
 
-    <section class="section d-flex justify-content-center" id="section-perfil">
-        <div class="w-100 d-flex justify-content-center">
-          <div class="card-header pt-5">
-            <img
-                class="doctor"
-                src="assets/img/doctor.png"
-                alt="doctor"
-              />
-          </div>
-          <div class="card-body">
-            <form class="px-4">
-              <div class="row g-2">
-              <div class="col-md">
-                <label class="mb-2" for="cedula">Cédula del doctor</label>
-                    <input type="number" class="form-control p-1" id="cedula" readonly>
-              <div class="row g-2">
-              <div class="col-md">
-                <label class="mb-2 mt-2" for="names">Nombre del doctor</label>
-                    <input type="text" class="form-control p-1" id="names" readonly>
-              </div>
-                  <div class="col-md">
-                      <br>
-                      <button class="mt-3" style="right: 50px; border: 0;" id="editar"><img style="width: 30px; height: 30px;"
-                                                    class="editar"
-                                                    src="assets/img/lapiz.png"
-                                                    alt="doctor"
-                        /></button>
-                  </div>
-              </div>
-              <div class="row g-2">
-              <div class="col-md">
-                <label id="correo_doctor" class="mb-2 mt-2" for="email">Correo electronico</label>
-                    <input type="email" class="form-control p-1" id="email" readonly>
-              </div>
-                  <div class="col-md">
-                      <br>
-                      <button class="mt-3" style="right: 50px; border: 0;" id="editar2"><img style="width: 30px; height: 30px;"
-                                                    class="editar"
-                                                    src="assets/img/lapiz.png"
-                                                    alt="doctor"
-                        /></button>
-                  </div>
-              </div>
-              <div class="row g-2">
-              <div class="col-md">
-                <label id="celular_doctor" class="mb-2 mt-2" for="floatingInputGrid">Celular</label>
-                    <input type="number" class="form-control p-1" id="phone" readonly>
-              </div>
-                  <div class="col-md">
-                      <br>
-                      <button class="mt-3" style="right: 50px; border: 0;" id="editar3"><img style="width: 30px; height: 30px;"
-                                                    class="editar"
-                                                    src="assets/img/lapiz.png"
-                                                    alt="doctor"
-                        /></button>
-                  </div>
-              </div>
-              <div class="row g-2">
-              <div class="col-md">
-                <label  class="mb-2 mt-2" for="floatingInputGrid">Especialidad</label>
-                    <input type="text" class="form-control p-1" id="specialty" readonly>
-              </div>
-                  <div class="d-flex justify-content-center mt-3">
-                  <button class="w-50 btn btn-primary btn-lg " id="buttonUpdate" type="button">Editar</button>
-                  </div>
-              </div>
-            </form>
-          </div>
-    </section>
+    <section class="section d-flex justify-content-center" id="section-perfil"></section>
   <!--Section: Design Block-->
     <!-- <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -181,7 +141,6 @@
     ></script> -->
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
-    <script src="./assets/js/scripts.js"></script>
     <script src="./assets/js/cookie.js"></script>
     <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
   </body>
