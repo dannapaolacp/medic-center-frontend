@@ -150,24 +150,24 @@
                             </th>
                         </tr>
                         <tr>
+                          <th>
+                              <th>Delecciones la fecha: </th>
+                              <td><input type="date" class="form-control"+ name="inputFecha" id="inputFecha" min="2022-12-16" required></td>
+                          </th>
+                      </tr>
+                        <tr>
                             <th>
-                                <th>Seleccione la fecha y Hora: </th>
-                                <td><input type="text"id="inputFecha" class="form-control" name="date" required></td>
+                                <th>Seleccione la  Hora: </th>
+                                <td><input type="time"id="inputHora" class="timepicker" name="date" required></td>
                             </th>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                            <script src="./assets/js/jquery-3.6.2.min.js"></script>
+                            <script src="./assets/js/qcTimepicker.js"></script>
                               <script>
-                               /* document.ready(()=>{
-
-                                });*/
-                                $('#inputFecha').datetimepicker({
-                                  step: 30,
-                                  minDateTime:true,
-                                  disabledWeekDays: [6,0],
-                                  minTime:'08:00',
-                                  maxTime:'18:00',
-
+                               $(document).ready(function() {
+                                  $('.timepicker').qcTimepicker({
+                                    minTime:'08:00',maxTime:'17:59',
                                   });
+                                          });
                               </script>
                         </tr>
                         <tr>

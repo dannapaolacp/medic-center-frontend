@@ -6,7 +6,11 @@ btn.addEventListener('click',(event)=>{
   const minutos= document.querySelector('#inputHminutos');
   const pm= document.querySelector('#pm');*/
   //Fecha
+  let hora= document.querySelector('#inputHora');
   let fecha= document.querySelector('#inputFecha');
+  let date = new Date(fecha.value);
+  const actualD = parseInt(date.getDay());
+
 //cedula
   let cc= document.querySelector('#cc');
   let doctor= document.querySelector('#doctorSelect');
@@ -14,7 +18,8 @@ btn.addEventListener('click',(event)=>{
   let descri= document.querySelector('#description');
 
 
- console.log(typeof fecha);
+  console.log(actualD);
+ console.log(typeof hora);
  console.log(fecha.value);
  console.log(typeof cc);
  console.log(cc.value);
@@ -66,6 +71,17 @@ function agregar(){
 }
 */
 
+if (actualD==5||actualD==6) {
+
+  Swal.fire({
+    icon: 'error',
+    title: 'ERROR!!',
+    text: 'Lo sentimos, los fines de semana no atendemos, porfavor selecione de nuevo la fecha ',
+  });
+  fecha.value = '';
+  fecha.focus();
+  return false;
+}
 
 
 });
