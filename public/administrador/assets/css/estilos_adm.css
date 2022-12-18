@@ -131,6 +131,19 @@ footer {
   position: relative;
   left: 125px;
 }
+.head1{
+  background: linear-gradient(#ed5c5c, #db3939);
+  color: white;
+}
+
+.information{
+  background-color: white;
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  right: 85px;
+  margin-top: 50px;
+}
 
 .sectioncrear{
   position: absolute;

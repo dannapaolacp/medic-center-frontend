@@ -124,10 +124,44 @@ footer {
   background-color: grey;
 }
 
+.information{
+  background-color: white;
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  right: 85px;
+  margin-top: 50px;
+}
+
+tr{
+  text-align: center;
+}
+
+.head1{
+  background: #4B5CEB;
+  color: white;
+}
+
  /* .editar {
   width: 30px;
   height: 30px;
   right: 0;
 } */
 
+.consultar {
+  position: absolute;
+  top: 150px;
+  right: 240px;
+  width: 40%;
+  background-color: #ededed;
+}
 
+.consultar input {
+  position: relative;
+  left: 115px;
+}
+
+.consultar button{
+  position: relative;  
+  left: 125px;
+}

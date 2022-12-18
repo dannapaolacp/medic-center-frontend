@@ -45,7 +45,7 @@
               Visitas
             </button>
             <ul class="dropdown-menu">
-              <li><button class="diseño" id="modificar">Modificar estado</button></li>
+              <li><button onclick="location.href='visitasConsultar.html'" class="diseño" id="modificar">Consultar</button></li>
             </ul>
           </div>
         </li>
@@ -55,7 +55,7 @@
               type="button"
               class="btn btn-secondary dropdown-toggle"
               data-bs-toggle="dropdown"
-              aria-expanded="false"
+              aria-expanded="false"              
             >
               <img
                 class="icono"
@@ -65,29 +65,7 @@
               Historias clínicas
             </button>
             <ul class="dropdown-menu">
-              <li><button class="diseño" id="consultar">Consultar </button></li>
-              <li><button class="diseño" id="exportar">Exportar PDF</button></li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <div class="btn-group dropend">
-            <button
-              type="button"
-              class="btn btn-secondary dropdown-toggle"
-              data-bs-toggle="dropdown"
-            >
-              <img
-                class="icono"
-                src="assets/img/calendario.png"
-                alt="logo_calendario"
-              />
-              Calendario de citas
-            </button>
-            <ul class="dropdown-menu">
-              <li><button class="diseño" id="aplazar">Aplazar citas</button></li>
-              <li><button class="diseño" id="ver">Ver citas</button></li>
-              <li><button class="diseño" id="dias">Días previos</button></li>
+              <li><button class="diseño" onclick="location.href='historiaClinica.html'" id="consultar">Consultar </button></li>              
             </ul>
           </div>
         </li>
