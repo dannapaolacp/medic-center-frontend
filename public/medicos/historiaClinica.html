@@ -65,7 +65,7 @@
               Historias clínicas
             </button>
             <ul class="dropdown-menu">
-              <li><button class="diseño" id="consultar">Consultar </button></li>
+              <li><button class="diseño" onclick="location.href='historiaClinica.html'" id="consultar">Consultar </button></li>
               <li><button class="diseño" id="exportar">Exportar PDF</button></li>
             </ul>
           </div>
@@ -104,7 +104,7 @@
       <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
     </footer>
     <section class="consultar d-flex justify-content-center pt-3" id="consultar-historia">
-        <form class="row g-3">
+        <div class="row g-3">
         <div class="d-flex justify-content-center">
           <label style="font-weight: bold;">Digite la cédula del paciente:</label>
         </div>
@@ -112,9 +112,9 @@
             <input type="text" class="form-control" id="cc" placeholder="Ejemplo: 1000777080">
         </div>
         <div class="col-auto">
-            <button id="consultar" type="submit" class="btn btn-primary mb-3">Consultar</button>
+            <button id="consultar" onclick="location.href='mostrarHistoriaClinica.html'" class="btn btn-primary mb-3">Consultar</button>
         </div>
-        </form>
+        </div>
     </section>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
