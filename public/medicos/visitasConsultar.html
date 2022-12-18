@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width-device-width, initial-scale-1.0" />
-    <title>Administrador</title>
-    <link rel="stylesheet" href="assets/css/estilos_adm.css" />
+    <title>Doctor</title>
+    <link rel="stylesheet" href="assets/css/estilos.css" />
     <link rel="icon" type="image/x-icon" href="../assets/img/medicina.png" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
@@ -15,24 +15,20 @@
       class="prueba d-flex flex-column flex-shrink-0 p-3"
       style="width: 280px; position: absolute; top: 0; left: 0; bottom: 0"
     >
-      <a id="name_administrador"
+      <a
         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
       >
         </svg>
         <img
                 class="avatar"
-                src="assets/img/gerente.png"
+                src="assets/img/doctor.png"
                 alt="doctor"
               />
-<<<<<<< HEAD
-              <span id="nameProfile" class="fs-4
-=======
               <span id="nameProfile" class="fs-4"></span>
->>>>>>> d8affa70c143be9eb87523cb56b88960bc9e521a
       </a>
       <hr />
       <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item mb-2">
+        <li class="nav-item">
           <!-- Default dropend button -->
           <div class="btn-group dropend">
             <button
@@ -42,18 +38,18 @@
               aria-expanded="false"
             >
               <img
-                class="icono"
-                src="assets/img/analitica.png"
+                class="icono_1"
+                src="assets/img/visitante.png"
                 alt="visitas"
               />
-              Reporte paciente
+              Visitas
             </button>
             <ul class="dropdown-menu">
-              <li><button class="diseño pe-2 px-4" id="reporte_paciente" onclick="location.href='./ReporPa.html'">Generar reporte</button></li>
+              <li><button onclick="location.href='visitasConsultar.html'" class="diseño" id="modificar">Consultar</button></li>
             </ul>
           </div>
         </li>
-        <li class="nav-item mb-2">
+        <li class="nav-item">
           <div class="btn-group dropend">
             <button
               type="button"
@@ -63,67 +59,17 @@
             >
               <img
                 class="icono"
-                src="assets/img/reporte_m.png"
+                src="assets/img/historia-clinica.png"
                 alt="historia"
               />
-              Reporte médico
+              Historias clínicas
             </button>
             <ul class="dropdown-menu">
-              <li><button class="diseño pe-2 px-4" id="reporte_medico" onclick="location.href='./ReporteMedico.html'" >Generar reporte</button></li>
+              <li><button class="diseño" id="consultar">Consultar </button></li>
+              <li><button class="diseño" id="exportar">Exportar PDF</button></li>
             </ul>
           </div>
-        </li>
-        <li class="nav-item mb-2">
-          <div class="btn-group dropend">
-            <button id="crear"
-              type="button"
-              class="btn btn-secondary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              onclick="location.href='./crear_medico.html'"
-            >
-              <img
-                class="icono"
-                src="assets/img/doctor.png"
-                alt="logo_calendario"
-              />
-              Crear médico
-            </button>
-          </div>
-        </li>
-        <li class="nav-item mb-2">
-          <div class="btn-group dropend">
-            <button id="eliminar_med"
-              type="button"
-              class="btn btn-secondary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              onclick="location.href='./eliminar_paciente.html'"
-            >
-              <img
-                class="icono"
-                src="assets/img/despedido.png"
-                alt="logo_calendario"
-              />
-              Eliminar médico
-            </button>
-          </div>
-        </li>
-        <li class="nav-item mb-2">
-          <div class="btn-group dropend">
-            <button id="eliminar_pac"
-              type="button"
-              class="btn btn-secondary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              onclick="location.href='./eliminar_paciente.html'"
-            >
-              <img
-                class="icono"
-                src="assets/img/basura.png"
-                alt="logo_calendario"
-              />
-              Eliminar paciente
-            </button>
-          </div>
-        </li>
+        </li>        
       </ul>
       <hr />
       <div class="dropdown">
@@ -135,7 +81,7 @@
         >
           <img
                 class="usuario"
-                src="assets/img/gerente.png"
+                src="assets/img/doctor.png"
                 alt="doctor"
               />
           <strong>Usuario</strong>
@@ -143,10 +89,42 @@
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
           <li><button class="dropdown-item w-100" id="perfil" onclick="location.href='./perfil.html'">Perfil</button></li>
           <li><hr class="dropdown-divider" /></li>
-          <li><button class="dropdown-item w-100" id="close" onclick="location.href='../index.html'">Cerrar Sesión</button></li>
+          <li><button onclick="location.href='/login/'" class="dropdown-item w-100" id="close">Cerrar Sesión</button></li>
         </ul>
+      </div>      
+    </div>    
+
+<div class="information">
+    <div class="head1">Información de visitas</div>
+    <div class="card-body">
+      <div class="container">
+        <div class="table-responsive">
+          <table
+            id="table-visits"
+            class="table table-bordered table-striped"
+          >
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>HORA</th>
+                <th>FECHA</th>
+                <th>DESCRIPCIÓN</th>
+                <th>ACCIÓN</th>
+              </tr>                          
+            </thead>            
+            <tbody></tbody>
+          </table>
+          <div class="col-md-12">
+            <br />
+          </div>
+        </div>
       </div>
+      <script src="../bootstrap/js/bootstrap.min.js"></script>
+      <script src="../sw/dist/sweetalert2.min.js"></script>
+      <script src="../assets/js/jquery-3.6.1.min.js"></script>
     </div>
+  </div>
+
     <footer class="" id="footer">
     <ul class="nav justify-content-center border-bottom">
       <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
@@ -157,23 +135,18 @@
     </ul>
       <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
     </footer>
-    <section class="eliminar d-flex justify-content-center pt-3" id="eliminar-usuario">
-        <form class="row g-3">
-        <div class="d-flex justify-content-center">
-          <label style="font-weight: bold;">Digite el número de tarjeta profesional del médico a eliminar:</label>
-        </div>
-  <div class="col-auto">
-    <input type="text" class="form-control" id="professionalCard" placeholder="Ejemplo: 123456">
-  </div>
-  <div class="col-auto">
-    <button id="eliminar" type="submit" class="btn btn-danger mb-3">Eliminar</button>
-  </div>
-</form>
-    </section>
+
+    <section class="section d-flex justify-content-center" id="section-perfil"></section>
+  <!--Section: Design Block-->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script> -->
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
     <script src="./assets/js/cookie.js"></script>
-    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/consultVisits.js"></script>
     <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
   </body>
 </html>
