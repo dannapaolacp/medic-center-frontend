@@ -149,42 +149,42 @@
                                 <td><input type="number" class="form-control"+ name="cc" id="cc" required></td>
                             </th>
                         </tr>
+
                         <tr>
                           <th>
-                              <th>Delecciones la fecha: </th>
-                              <td><input type="date" class="form-control"+ name="inputFecha" id="inputFecha" min="2022-12-16" required></td>
+                              <th>Seleccione Fecha y Hora: </th>
+                              <td><input type="text"id="inputHora" class="form-control" name="date" required></td>
                           </th>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                            <script>
+                             /* document.ready(()=>{
+
+                              });*/
+                              $('#inputHora').datetimepicker({
+                                step: 30,
+                                minDateTime:true,
+                                //disabledWeekDays: [6,0],
+                                minTime:'08:00',
+                                maxTime:'18:00',
+                                 datepicker:true,
+                                });
+                            </script>
                       </tr>
-                        <tr>
-                            <th>
-                                <th>Seleccione la  Hora: </th>
-                                <td><input type="time"id="inputHora" class="timepicker" name="date" required></td>
-                            </th>
-                            <script src="./assets/js/jquery-3.6.2.min.js"></script>
-                            <script src="./assets/js/qcTimepicker.js"></script>
-                              <script>
-                               $(document).ready(function() {
-                                  $('.timepicker').qcTimepicker({
-                                    minTime:'08:00',maxTime:'17:59',
-                                  });
-                                          });
-                              </script>
-                        </tr>
                         <tr>
                           <th>
                               <th>Servicio Solicitado: </th>
                               <td><select name="doctor" class="form-control" id="servicioSelect" required>
                                   <option></option>
-                                  <option value="Pediatria">Pediatria</option>
-                                  <option value="Medicina Interna">Medicina Interna</option>
-                                  <option value="Urologia">Urologia</option>
-                                  <option value="Neurologia">Neurologia</option>
-                                  <option value="Hematologia">Hematologia</option>
-                                  <option value="Hepatologia">Hepatologia</option>
-                                  <option value="Ginecologia">Ginecologia</option>
-                                  <option value="Neumologia">Neumologia</option>
-                                  <option value="Cardiologia">Cardiologia</option>
-                                  <option value="Psiquiatria">Psiquiatria</option>
+                                  <option value="pediatria">Pediatria</option>
+                                  <option value="medicina interna">Medicina Interna</option>
+                                  <option value="urologia">Urologia</option>
+                                  <option value="neurologia">Neurologia</option>
+                                  <option value="hematologia">Hematologia</option>
+                                  <option value="hepatologia">Hepatologia</option>
+                                  <option value="ginecologia">Ginecologia</option>
+                                  <option value="neumologia">Neumologia</option>
+                                  <option value="cardiologia">Cardiologia</option>
+                                  <option value="psiquiatria">Psiquiatria</option>
                               </select></td>
                           </th>
                       </tr>
@@ -220,5 +220,7 @@
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/askDate.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+     <script src="./assets/js/qcTimepicker.js"></script>
   </body>
 </html>

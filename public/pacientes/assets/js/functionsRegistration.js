@@ -134,7 +134,7 @@ buttonEnviar.addEventListener('click', function () {
     Swal.fire({
       icon: 'error',
       title: 'ERROR!!',
-      text: 'Debe insertar su edad correctamente',
+      text: 'Debe insertar un numero de telefono correctamente',
     });
     phone.value = '';
     phone.focus();
@@ -150,25 +150,18 @@ buttonEnviar.addEventListener('click', function () {
     email.focus();
     return false;
   }
-
-  function ValidarCorreo(email) {
-    const Regular =
-      /^[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    const valido = Regular.test(email.value);
-    if (valido == false) {
-      Swal.fire({
-        icon: 'error',
-        title: 'ERROR!!',
-        text: 'Correo no valido',
-      });
-      email.value = '';
-      email.focus();
-      return false;
-    }
+  let Regular = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+  const valido = Regular.test(email.value);
+  if (valido == false) {
+    Swal.fire({
+      icon: 'error',
+      title: 'ERROR!!',
+      text: 'Correo no valido',
+    });
+    email.value = '';
+    email.focus();
+    return false;
   }
-
-  ValidarCorreo(email.value);
-
   if (weight.value == 0) {
     Swal.fire({
       icon: 'error',
@@ -266,8 +259,8 @@ buttonEnviar.addEventListener('click', function () {
       weight: weight.value,
       height: height.value,
       birth: birth.value,
-      answer: answer.value,
-      response: response.value,
+      question: answer.value,
+      answer: response.value,
     };
 
     console.table(registration);
