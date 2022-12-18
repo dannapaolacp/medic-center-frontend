@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
     <script src="../assets/js/jquery-3.6.1.min.js"></script>
     <script src="./assets/js/cookie.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha512-f0tzWhCwVFS3WeYaofoLWkTP62ObhewQ1EZn65oSYDZUg1+CyywGKkWzm8BxaJj5HGKI72PnMH9jYyIFz+GH7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="body">
 
@@ -132,49 +133,76 @@
             <form action="formulario" action="askDate.html" method="post">
                 <div class="container ">
                     <table class="table">
+                      <tr>
+                        <th>
+                            <th>Tipo de solicitud: </th>
+                            <td><select name="description" class="form-control" id="description" required>
+                                <option></option>
+                                <option value="Asignar Cita">Asignar Cita</option>
+                                <option value="Cancelar Cita">Cancelar Cita</option>
+                            </select></td>
+                        </th>
+                    </tr>
                         <tr>
                             <th>
                                 <th>Digite su cedula: </th>
-                                <td><input type="number" class="form-control"+ name="cc" id="cc" placeholder="ej: 1234567890"></td>
+                                <td><input type="number" class="form-control"+ name="cc" id="cc" required></td>
                             </th>
                         </tr>
                         <tr>
-                            <th>
-                                <th>Seleccione la hora: </th>
-                                <td><input type="time" class="form-control" name="hour"></td>
-                            </th>
-                        </tr>
+                          <th>
+                              <th>Delecciones la fecha: </th>
+                              <td><input type="date" class="form-control"+ name="inputFecha" id="inputFecha" min="2022-12-16" required></td>
+                          </th>
+                      </tr>
                         <tr>
                             <th>
-                                <th>Seleccione la fecha: </th>
-                                <td><input type="date" class="form-control" name="date"></td>
+                                <th>Seleccione la  Hora: </th>
+                                <td><input type="time"id="inputHora" class="timepicker" name="date" required></td>
                             </th>
+                            <script src="./assets/js/jquery-3.6.2.min.js"></script>
+                            <script src="./assets/js/qcTimepicker.js"></script>
+                              <script>
+                               $(document).ready(function() {
+                                  $('.timepicker').qcTimepicker({
+                                    minTime:'08:00',maxTime:'17:59',
+                                  });
+                                          });
+                              </script>
                         </tr>
                         <tr>
-                            <th>
-                                <th>Especialidad: </th>
-                                <td><select name="speciality" class="form-control" id="speciality">
-                                    <option>Seleccionar..</option>
-                                    <option value="">Pediatria</option>
-                                    <option value="">Otorrinolaringologia</option>
-                                </select></td>
-                            </th>
-                        </tr>
+                          <th>
+                              <th>Servicio Solicitado: </th>
+                              <td><select name="doctor" class="form-control" id="servicioSelect" required>
+                                  <option></option>
+                                  <option value="Pediatria">Pediatria</option>
+                                  <option value="Medicina Interna">Medicina Interna</option>
+                                  <option value="Urologia">Urologia</option>
+                                  <option value="Neurologia">Neurologia</option>
+                                  <option value="Hematologia">Hematologia</option>
+                                  <option value="Hepatologia">Hepatologia</option>
+                                  <option value="Ginecologia">Ginecologia</option>
+                                  <option value="Neumologia">Neumologia</option>
+                                  <option value="Cardiologia">Cardiologia</option>
+                                  <option value="Psiquiatria">Psiquiatria</option>
+                              </select></td>
+                          </th>
+                      </tr>
                         <tr>
                             <th>
                                 <th>Seleccione un doctor: </th>
-                                <td><select name="doctor" class="form-control" id="doctor">
-                                    <option>Seleccionar..</option>
-                                    <option value="">Juanito Sanchez</option>
-                                    <option value="">Pepe Perez</option>
-                                    <option value="">Alvin Yakitory</option>
-                                    <option value="">Jefferson Gutierritos</option>
+                                <td><select name="doctor" class="form-control" id="doctorSelect" required>
+                                    <option></option>
+                                    <option value="Juanito Sanchez">Juanito Sanchez</option>
+                                    <option value="Pepe Perez">Pepe Perez</option>
+                                    <option value="Alvin Yakitory">Alvin Yakitory</option>
+                                    <option value="Jefferson Gutierritos">Jefferson Gutierritos</option>
                                 </select></td>
                             </th>
                         </tr>
                     </table>
                 </div>
-                <button type="button" class="login_box">Solicitar</button>
+                <button type="button" class="login_box"  id="btnCitas">Solicitar</button>
             </form>
         </div>
     </div>
@@ -190,7 +218,7 @@
     </footer>
     <section class="section d-flex justify-content-center" id="section-perfil"></section>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/funciones.js"></script>
+    <script src="./assets/js/askDate.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
   </body>
 </html>
