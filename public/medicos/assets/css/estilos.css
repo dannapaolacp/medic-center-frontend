@@ -37,6 +37,7 @@
 }
 
 .prueba .dropdown-menu button {
+  padding: 5px;
   text-decoration: none;
   color: #fff;
   font-size: 14px;

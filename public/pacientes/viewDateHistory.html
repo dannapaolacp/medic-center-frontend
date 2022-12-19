@@ -2,10 +2,9 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consultar doctores</title>
-    <link rel="stylesheet" href="assets/css/estilos.css" />
+    <title>Consultar citas</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/medicina.png" />
+    <link rel="stylesheet" href="assets/css/estilos.css" />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
     <script src="../assets/js/jquery-3.6.1.min.js"></script>
@@ -26,7 +25,6 @@
       <hr />
       <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-          <!-- Default dropend button -->
           <div class="btn-group dropend">
             <button
               type="button"
@@ -154,32 +152,25 @@
       </div>
     </div>
     <div class="information">
-      <div class="head1">Información de doctores</div>
-      <div class="card-body">
-        <div class="container">
-          <div class="table-responsive">
-            <table
-              id="table-doctors"
-              class="table table-bordered table-striped"
-            >
+      <div class="head1">Información de sus citas</div>
+      <div class="card-body">        
+          <div class="container">
+            <table id="table-viewDate" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>NOMBRE</th>
-                  <th>TELEFONO</th>
-                  <th>EMAIL</th>
+                  <th>N°</th>
+                  <th>HORA</th>
+                  <th>FECHA</th>
                   <th>ESPECIALIDAD</th>
+                  <th>DOCTOR</th>
+                  <th>ESTADO</th>
                 </tr>
               </thead>
               <tbody></tbody>
             </table>
           </div>
-        </div>
-        <script src="../bootstrap/js/bootstrap.min.js"></script>
-        <script src="../sw/dist/sweetalert2.min.js"></script>
-        <script src="../assets/js/jquery-3.6.1.min.js"></script>
       </div>
     </div>
-
     <footer class="" id="footer">
       <ul class="nav justify-content-center border-bottom">
         <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
@@ -199,6 +190,6 @@
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/funciones.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scriptViewDateHistory.js"></script>
   </body>
 </html>
