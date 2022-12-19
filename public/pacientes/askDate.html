@@ -133,20 +133,10 @@
             <form action="formulario" action="askDate.html" method="post">
                 <div class="container ">
                     <table class="table">
-                      <tr>
-                        <th>
-                            <th>Tipo de solicitud: </th>
-                            <td><select name="description" class="form-control" id="description" required>
-                                <option></option>
-                                <option value="Asignar Cita">Asignar Cita</option>
-                                <option value="Cancelar Cita">Cancelar Cita</option>
-                            </select></td>
-                        </th>
-                    </tr>
                         <tr>
                             <th>
                                 <th>Digite su cedula: </th>
-                                <td><input type="number" class="form-control"+ name="cc" id="cc" required></td>
+                                <td><input type="number" class="form-control"+ name="cc" id="cc1" required readonly></td>
                             </th>
                         </tr>
 
@@ -174,7 +164,7 @@
                           <th>
                               <th>Especialidad: </th>
                               <td><select name="doctor" class="form-control" id="servicioSelect" required>
-                                  <option></option>
+                                  <!-- <option></option> -->
                                   <option value="pediatria">Pediatria</option>
                                   <option value="medicina interna">Medicina Interna</option>
                                   <option value="urologia">Urologia</option>
@@ -193,10 +183,6 @@
                                 <th>Seleccione un doctor: </th>
                                 <td><select name="doctor" class="form-control" id="doctorSelect" required>
                                     <option></option>
-                                    <option value="Juanito Sanchez">Juanito Sanchez</option>
-                                    <option value="Pepe Perez">Pepe Perez</option>
-                                    <option value="Alvin Yakitory">Alvin Yakitory</option>
-                                    <option value="Jefferson Gutierritos">Jefferson Gutierritos</option>
                                 </select></td>
                             </th>
                         </tr>

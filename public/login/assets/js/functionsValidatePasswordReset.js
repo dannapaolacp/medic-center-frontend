@@ -18,7 +18,6 @@ buttonValidate1.addEventListener('click', () => {
   const getUser = async () => {
     const data = await fetch(`http://localhost:3000/api/recovery/${cookiecc2}`);
     const users = await data.json();
-    console.log(users);
     if (cc.value == users.cc) {
       Swal.fire({
         icon: 'success',
