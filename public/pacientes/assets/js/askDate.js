@@ -13,6 +13,10 @@ btn.addEventListener('click',(event)=>{
   let servicio= document.querySelector('#servicioSelect');
   let descri= document.querySelector('#description');
 
+//sub
+let hora1=hora.value;
+let hora2=hora1.split(" ");
+
 
 //cedula
 if (cc.value == 0) {
