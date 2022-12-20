@@ -47,7 +47,6 @@
               <ul class="dropdown-menu">
                 <li><button class="diseño pe-2 px-4" id="C_registros" onclick="location.href='./Citas_T.html'">Total Citas</button></li>
                 <li><button class="diseño pe-2 px-4" id="C_realizadas" onclick="location.href='./Citas_R.html'">Citas Realizadas</button></li>
-                <li><button class="diseño pe-2 px-4" id="C_espera" onclick="location.href='./Citas_Ee.html'">Citas En Espera</button></li>
                 <li><button class="diseño pe-2 px-4" id="C_canceladas" onclick="location.href='./Citas_Can.html'">Citas Canceldas</button></li>
               </ul>
             </div>
@@ -148,23 +147,25 @@
       </div>
     </div>
 
+
+
 <div class="information">
   <div class="head1">Reportes Medicos</div>
   <div class="card-body">
-    <div class="container">
+    <div class="container estilo_div">
       <div class="table-responsive">
         <table
-          id="table-doctors"
+          id="table_doctors"
           class="table table-bordered table-striped"
         >
 
           <thead>
             <tr>
               <th>I.D</th>
-              <th>HORA</th>
-              <th>FECHA</th>
-              <th>TIPO</th>
-              <th>DOCTOR</th>
+              <th>NOMBRE</th>
+              <th>TELEFONO</th>
+              <th>EMAIL</th>
+              <th>ESPECIALIDAD</th>
             </tr>
           </thead>
           <tbody>
@@ -199,6 +200,7 @@
     <script src="../sw/dist/sweetalert2.min.js"></script>
     <script src="../assets/js/jquery-3.6.1.min.js"></script>
     <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
+    <script src="./assets/js/ReporteMedico.js"></script>
   </body>
 </html>
 
