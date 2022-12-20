@@ -1,20 +1,6 @@
-// var fechaActual = new Date();
-// var day = fechaActual.getDate().toString;
-// var month = (fechaActual.getMonth() + 1).toString;
-// var fechaA = fechaActual.getFullYear() + '-' + month + '-' + day;
-// function comparar() {
-//   if (month.length <= 1) {
-//     month = '0' + month;
-//   }
-//   if (day.length <= 1) {
-//     day = '0' + day;
-//   }
-// }
-// console.log(fechaA);
 let buttonEnviar = document.getElementById('registrationbutton');
 
 buttonEnviar.addEventListener('click', function () {
-  let form = document.getElementById('registrationform');
   let cc = document.getElementById('cc');
   let names = document.getElementById('names');
   let password = document.getElementById('password');
@@ -212,20 +198,6 @@ buttonEnviar.addEventListener('click', function () {
     birth.focus();
     return false;
   }
-  //var fechaFormulario = birth.value;
-  //const fechaI = birth.value.split('-');
-  //console.table(fechaI);
-  //console.log(birth);
-  // if (birth > fechaA) {
-  //   Swal.fire({
-  //     icon: 'error',
-  //     title: 'ERROR!!',
-  //     text: 'Debe insertar una fecha valida',
-  //   });
-  //   birth.value = '';
-  //   birth.focus();
-  //   return false;
-  // }
   if (answer.value == 0) {
     Swal.fire({
       icon: 'error',
