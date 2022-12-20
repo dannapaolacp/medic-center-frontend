@@ -48,7 +48,6 @@
                 <ul class="dropdown-menu">
                   <li><button class="diseño pe-2 px-4" id="C_registros" onclick="location.href='./Citas_T.html'">Total Citas</button></li>
             <li><button class="diseño pe-2 px-4" id="C_realizadas" onclick="location.href='./Citas_R.html'">Citas Realizadas</button></li>
-            <li><button class="diseño pe-2 px-4" id="C_espera" onclick="location.href='./Citas_Ee.html'">Citas En Espera</button></li>
             <li><button class="diseño pe-2 px-4" id="C_canceladas" onclick="location.href='./Citas_Can.html'">Citas Canceldas</button></li>
                 </ul>
               </div>
@@ -152,39 +151,52 @@
     </div>
 
 <div class="information">
-  <div class="head1">Citas Realizadas</div>
+  <div class="head1">Filtros</div>
+
+
   <div class="card-body">
     <div class="container">
-      <!--radio-->
-      <!--radio-->
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Reporte Semanal
-        </label>
+      <div class="row">
+        <div class="col">
+          <!--radio-->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="semanalCitas_R1" checked>
+            <label class="form-check-label" for="semanalCitas_R1">
+              Reporte Semanal
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="quincenalCitas_R2">
+            <label class="form-check-label" for="quincenalCitas_R2">
+              Reporte Quincenal
+            </label>
+        </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="mensualCitas_R3">
+            <label class="form-check-label" for="mensualCitas_R3">
+              Reporte Mensual
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="semestralCitas_R4">
+            <label class="form-check-label" for="semestralCitas_R4">
+              Reporte Semestral
+            </label>
+          </div>
+        </div>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          Reporte Quincenal
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Reporte Mensual
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          Reporte Semestral
-        </label>
-      </div>
+    </div>
+    </div>
+
+    <div class="head1">Citas Realizadas</div>
+  <div class="card-body">
+    <div class="container">
       <div class="container estilo_div">
         <div class="table-responsive">
           <table
-            id="table-doctors"
+            id="Tabla_Realizadas"
             class="table table-bordered table-striped"
           >
             <thead>
@@ -230,6 +242,7 @@
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
     <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/Citas_R.js"></script>
     <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
   </body>
 </html>
