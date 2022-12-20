@@ -9,7 +9,6 @@ buttonEnviar.addEventListener('click', function (event) {
   let phone = document.getElementById('phone');
   let speciality = document.getElementById('speciality');
   let selectedOption = speciality.options[speciality.selectedIndex];
-  console.log(selectedOption.value);
   let password = document.getElementById('password');
   let passwordConfirm = document.getElementById('passwordConfirm');
   let answer = document.getElementById('answer');

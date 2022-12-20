@@ -10,35 +10,26 @@ const getCookies = (name) => {
 };
 
 const cookiescc = getCookies('cc');
+console.log(cookiescc);
 
 function tableVisits() {
-  fetch(`http://localhost:3000/api/appointments/medics/${cookiescc}`)
+  fetch(`http://localhost:3000/api/appointments/medics/${cookiescc}/prev`)
     .then((response) => response.json())
     .then((visits) => {
       let tablaVisits = document.querySelector('#table-visits tbody');
-      let dir = "'actualizarVisita.html'";
-      let icono =
-        '<button class="mt-3" style="right: 50px; border: 0;" id="actualizar"><img style="width: 30px; height: 30px;"' +
-        'onclick="location.href=' +
-        dir +
-        '"' +
-        'src="assets/img/confirmacion.png"' +
-        'alt="visita"' +
-        '/></button> ';
-      let i = 0;
       for (const itemVisits of visits) {
         const fecha = itemVisits.date.split('T');
         let tr =
           '<tr> <td>' +
-          (i += 1) +
+          itemVisits.id +
           '</td><td>' +
           itemVisits.hour +
           '</td><td>' +
           fecha[0] +
           '</td><td>' +
-          itemVisits.status +
+          itemVisits.name +
           '</td><td>' +
-          icono +
+          itemVisits.cc +
           '</td></tr>';
 
         tablaVisits.innerHTML += tr;

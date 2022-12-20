@@ -45,7 +45,8 @@
               Visitas
             </button>
             <ul class="dropdown-menu">
-              <li><button onclick="location.href='visitasConsultar.html'" class="diseño" id="modificar">Consultar</button></li>
+              <li><button onclick="location.href='visitasConsultar.html'" class="diseño" id="modificar">Consultar  actuales</button></li>
+              <li><button onclick="location.href='visitasConsultarHistorico.html'" class="diseño" id="modificar">Consultar historico</button></li>
             </ul>
           </div>
         </li>
@@ -65,11 +66,11 @@
               Historias clínicas
             </button>
             <ul class="dropdown-menu">
-              <li><button class="diseño" id="consultar">Consultar </button></li>
+              <li><button class="diseño" onclick="location.href='historiaClinica.html'" id="consultar">Consultar </button></li>
               <li><button class="diseño" id="exportar">Exportar PDF</button></li>
             </ul>
           </div>
-        </li>        
+        </li>
       </ul>
       <hr />
       <div class="dropdown">
@@ -91,8 +92,8 @@
           <li><hr class="dropdown-divider" /></li>
           <li><button onclick="location.href='/login/'" class="dropdown-item w-100" id="close">Cerrar Sesión</button></li>
         </ul>
-      </div>      
-    </div>    
+      </div>
+    </div>
 
 <div class="information">
     <div class="head1">Información de visitas</div>
@@ -108,10 +109,10 @@
                 <th>N°</th>
                 <th>HORA</th>
                 <th>FECHA</th>
-                <th>DESCRIPCIÓN</th>
+                <th>ESTADO</th>
                 <th>ACCIÓN</th>
-              </tr>                          
-            </thead>            
+              </tr>
+            </thead>
             <tbody></tbody>
           </table>
           <div class="col-md-12">

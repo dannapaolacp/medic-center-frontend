@@ -77,6 +77,15 @@
                   Ver citas
                 </button>
               </li>
+              <li>
+                <button
+                  onclick="location.href='viewDateHistory.html'"
+                  class="diseño"
+                  id="ver"
+                >
+                  Ver historico de citas
+                </button>
+              </li>
             </ul>
           </div>
         </li>
@@ -144,23 +153,23 @@
     </div>
     <div class="information">
       <div class="head1">Información de sus citas</div>
-      <div class="card-body">        
-          <div class="container">
-            <table id="table-viewDate" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>N°</th>
-                  <th>HORA</th>
-                  <th>FECHA</th>
-                  <th>ESPECIALIDAD</th>
-                  <th>DOCTOR</th>
-                  <th>ESTADO</th>
-                  <th>ACCIÓN</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
+      <div class="card-body">
+        <div class="container">
+          <table id="table-viewDate" class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>HORA</th>
+                <th>FECHA</th>
+                <th>ESPECIALIDAD</th>
+                <th>DOCTOR</th>
+                <th>ESTADO</th>
+                <th>CANCELAR CITA</th>
+              </tr>
+            </thead>
+            <tbody id="table-view-body"></tbody>
+          </table>
+        </div>
       </div>
     </div>
     <footer class="" id="footer">
@@ -180,7 +189,6 @@
       id="section-perfil"
     ></section>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/funciones.js"></script>
     <script src="../sw/dist/sweetalert2.min.js"></script>
     <script src="./assets/js/scriptViewDate.js"></script>
   </body>
