@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/medicina.png" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div class="login_box">
+      <img class="avatar" src="assets/img/medicina.png" alt="logo_medicina" />
+      <h1>MEDIC CENTER</h1>
+      <form>
+        <br /><br />
+        <!--Nombre de usuario-->
+        <label for="cc">Cedula de usuario</label>
+        <input type="text" id="cc" placeholder="Ingrese su cedula" />
+
+        <!--Contraseña-->
+        <label for="password">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Ingrese su contraseña"
+        />
+
+        <input type="button" id="buttonLogin" value="login" />
+        <a href="validatePasswordReset.html">Ha olvidado su contraseña?</a
+        ><br />
+        <a href="../pacientes/registration.html">No tienes una cuenta?</a>
+      </form>
+    </div>
+
+    <script src="./assets/js/login.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../sw/dist/sweetalert2.min.js"></script>
+  </body>
+</html>

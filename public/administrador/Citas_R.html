@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <title>Administrador</title>
+    <link rel="stylesheet" href="assets/css/estilos_adm.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/medicina.png" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="prueba d-flex flex-column flex-shrink-0 p-3"
+      style="width: 280px; position: absolute; top: 0; left: 0; bottom: 0"
+    >
+      <a id="name_administrador"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+      >
+        </svg>
+        <img
+                class="avatar"
+                src="assets/img/gerente.png"
+                alt="doctor"
+              />
+              <span id="nameProfile" class="fs-4"></span>
+      </a>
+      <hr />
+      <ul class="nav nav-pills flex-column mb-auto">
+
+            <!--sistema de citas-->
+            <li class="nav-item mb-2">
+              <div class="btn-group dropend">
+                <button
+                  type="button"
+                  class="btn btn-secondary dropdown-toggle "
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="icono"
+                    src="assets/img/analitica.png"
+                    alt="visitas"
+                  />
+                  Reporte de citas
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="diseño pe-2 px-4" id="C_registros" onclick="location.href='./Citas_T.html'">Total Citas</button></li>
+            <li><button class="diseño pe-2 px-4" id="C_realizadas" onclick="location.href='./Citas_R.html'">Citas Realizadas</button></li>
+            <li><button class="diseño pe-2 px-4" id="C_canceladas" onclick="location.href='./Citas_Can.html'">Citas Canceldas</button></li>
+                </ul>
+              </div>
+            </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono"
+                src="assets/img/reporte_m.png"
+                alt="historia"
+              />
+
+
+
+              Reporte médico
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="diseño pe-2 px-4" id="reporte_medico" onclick="location.href='./ReporteMedico.html'" >Generar reporte</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button id="crear_med"
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              onclick="location.href='./crear_medico.html'"
+            >
+              <img
+                class="icono"
+                src="assets/img/doctor.png"
+                alt="logo_calendario"
+              />
+              Crear médico
+            </button>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button id="eliminar_med"
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              onclick="location.href='./eliminar_medico.html'"
+            >
+              <img
+                class="icono"
+                src="assets/img/despedido.png"
+                alt="logo_calendario"
+              />
+              Eliminar médico
+            </button>
+          </div>
+        </li>
+        <li class="nav-item mb-2">
+          <div class="btn-group dropend">
+            <button id="eliminar_pac"
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              onclick="location.href='./eliminar_paciente.html'"
+            >
+              <img
+                class="icono"
+                src="assets/img/basura.png"
+                alt="logo_calendario"
+              />
+              Eliminar paciente
+            </button>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <div class="dropdown">
+        <a
+          href="#"
+          class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+                class="usuario"
+                src="assets/img/gerente.png"
+                alt="doctor"
+              />
+          <strong>Usuario</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li><button class="dropdown-item w-100" id="perfil" onclick="location.href='./perfil.html'">Perfil</button></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button class="dropdown-item w-100" id="close">Cerrar Sesión</button></li>
+        </ul>
+      </div>
+    </div>
+
+<div class="information">
+  <div class="head1">Filtros</div>
+
+
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!--radio-->
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="semanalCitas_R1" checked>
+            <label class="form-check-label" for="semanalCitas_R1">
+              Reporte Semanal
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="quincenalCitas_R2">
+            <label class="form-check-label" for="quincenalCitas_R2">
+              Reporte Quincenal
+            </label>
+        </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="mensualCitas_R3">
+            <label class="form-check-label" for="mensualCitas_R3">
+              Reporte Mensual
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="semestralCitas_R4">
+            <label class="form-check-label" for="semestralCitas_R4">
+              Reporte Semestral
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="head1">Citas Realizadas</div>
+  <div class="card-body">
+    <div class="container">
+      <div class="container estilo_div">
+        <div class="table-responsive">
+          <table
+            id="Tabla_Realizadas"
+            class="table table-bordered table-striped"
+          >
+            <thead>
+              <tr>
+                <th>I.D CITA</th>
+                <th>HORA</th>
+                <th>FECHA</th>
+                <th>DOCTOR</th>
+                <th>ESPECIALIDAD</th>
+                <th>NOMBRE DEL PACIENTE</th>
+                <th>ESTADO DE LA CITA</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+          <div class="col-md-12">
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <footer class="" id="footer">
+    <ul class="nav justify-content-center border-bottom">
+      <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
+      <li><p class="nav-link px-2 text-muted">Danna Paola</p></li>
+      <li><p class="nav-link px-2 text-muted">Daniel Garcia</p></li>
+      <li><p class="nav-link px-2 text-muted">Camilo Duarte</p></li>
+      <li><p class="nav-link px-2 text-muted">Marlon Herrera</p></li>
+    </ul>
+      <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
+    </footer>
+  <!--Section: Design Block-->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../sw/dist/sweetalert2.min.js"></script>
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/Citas_R.js"></script>
+    <!--<script src="../js/jquery-3.6.1.min.js"></script>-->
+  </body>
+</html>
+
+
+
+

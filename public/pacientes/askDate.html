@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar cita</title>
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/medicina.png" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/cookie.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha512-f0tzWhCwVFS3WeYaofoLWkTP62ObhewQ1EZn65oSYDZUg1+CyywGKkWzm8BxaJj5HGKI72PnMH9jYyIFz+GH7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body">
+
+    <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Paciente</title>
+    <link rel="stylesheet" href="assets/css/estilos.css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../sw/dist/sweetalert2.min.css" />
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="prueba d-flex flex-column flex-shrink-0 p-3"
+      style="width: 280px; position: absolute; top: 0; left: 0; bottom: 0"
+    >
+      <a
+        href="#"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+      >
+        <img
+                class="avatar"
+                src="assets/img/paciente.png"
+                alt="paciente"
+              />
+        <span id="nameProfile" class="fs-4"></span>
+      </a>
+      <hr />
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle "
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono_1"
+                src="assets/img/cita-medica.png"
+                alt="Agendar cita"
+              />
+              Agendar cita
+            </button>
+            <ul class="dropdown-menu">
+              <li><button onclick="location.href='askDate.html'" class="diseño" id="solicitar">Solicitar cita</button></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono_1"
+                src="assets/img/calendario.png"
+                alt="Calendario"
+              />
+              Calendario
+            </button>
+            <ul class="dropdown-menu">
+              <li><button onclick="location.href='viewDate.html'" class="diseño" id="ver">Ver citas</button></li>
+              <li>
+                <button
+                  onclick="location.href='viewDateHistory.html'"
+                  class="diseño"
+                  id="ver"
+                >
+                  Ver historico de citas
+                </button>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="btn-group dropend">
+            <button
+              type="button"
+              class="btn btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="icono"
+                src="assets/img/doctor.png"
+                alt="Especialidades"
+              />
+              Especialidades
+            </button>
+            <ul class="dropdown-menu">
+              <li><button onclick="location.href='consultDoctors.html'" class="diseño" id="consultar">Consultar doctores</button></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <hr />
+      <div class="dropdown">
+        <a
+          href="#"
+          class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+                class="usuario"
+                src="assets/img/paciente.png"
+                alt="paciente"
+              />
+          <strong>Usuario</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li><button onclick="location.href='profile.html'" class="dropdown-item w-100" id="perfil">Perfil</button></li>
+          <li><hr class="dropdown-divider" /></li>
+          <li><button onclick="location.href='/login/'" class="dropdown-item w-100">Cerrar Sesión</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="information">
+        <div class="head1">
+            Solicitar cita
+        </div>
+        <div class="card-body">
+            <form action="formulario" action="askDate.html" method="post">
+                <div class="container ">
+                    <table class="table">
+                      <!--<tr>
+                        <th>
+                            <th>Tipo de solicitud: </th>
+                            <td><select name="description" class="form-control" id="description" required>
+                                <option></option>
+                                <option value="Asignar Cita">Asignar Cita</option>
+                                <option value="Cancelar Cita">Cancelar Cita</option>
+                            </select></td>
+                        </th>
+                    </tr>-->
+                        <tr>
+                            <th>
+                                <th>Su cedula: </th>
+                                <td><input type="number" class="form-control"+ name="cc" id="cc1" readonly></td>
+                            </th>
+                        </tr>
+
+                        <tr>
+                          <th>
+                              <th>Seleccione Fecha y Hora: </th>
+                              <td><input type="text"id="inputHora" class="form-control" name="date" required></td>
+                          </th>
+                          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                            <script>
+                             /* document.ready(()=>{
+
+                              });*/
+                              $('#inputHora').datetimepicker({
+                                step: 30,
+                                minDateTime:true,
+                                //disabledWeekDays: [6,0],
+                                minTime:'08:00',
+                                maxTime:'18:00',
+                                 datepicker:true,
+                                });
+                            </script>
+                      </tr>
+                        <tr>
+                          <th>
+                              <th>Especialidad: </th>
+                              <td><select name="doctor" class="form-control" id="servicioSelect" required>
+                                  <!-- <option></option> -->
+                                  <option value="pediatria">Pediatria</option>
+                                  <option value="medicina interna">Medicina Interna</option>
+                                  <option value="urologia">Urologia</option>
+                                  <option value="neurologia">Neurologia</option>
+                                  <option value="hematologia">Hematologia</option>
+                                  <option value="hepatologia">Hepatologia</option>
+                                  <option value="ginecologia">Ginecologia</option>
+                                  <option value="neumologia">Neumologia</option>
+                                  <option value="cardiologia">Cardiologia</option>
+                                  <option value="psiquiatria">Psiquiatria</option>
+                              </select></td>
+                          </th>
+                      </tr>
+                        <tr>
+                            <th>
+                                <th>Seleccione un doctor: </th>
+                                <td><select name="doctor" class="form-control" id="doctorSelect" required>
+                                    <option></option>
+                                </select></td>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+                <button type="button" class="login_box"  id="btnCitas">Solicitar</button>
+            </form>
+        </div>
+    </div>
+    <footer class="" id="footer">
+    <ul class="nav justify-content-center border-bottom">
+      <li><p class="nav-link px-2 text-muted">Gian Franco</p></li>
+      <li><p class="nav-link px-2 text-muted">Danna Paola</p></li>
+      <li><p class="nav-link px-2 text-muted">Daniel Garcia</p></li>
+      <li><p class="nav-link px-2 text-muted">Camilo Duarte</p></li>
+      <li><p class="nav-link px-2 text-muted">Marlon Herrera</p></li>
+    </ul>
+      <p class="text-center text-muted mt-3">Universidad Francisco José de Caldas</p>
+    </footer>
+    <section class="section d-flex justify-content-center" id="section-perfil"></section>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/askDate.js"></script>
+    <script src="../sw/dist/sweetalert2.min.js"></script>
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+     <script src="./assets/js/qcTimepicker.js"></script>
+  </body>
+</html>
