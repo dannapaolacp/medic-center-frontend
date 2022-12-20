@@ -158,11 +158,11 @@ btn4.addEventListener('click',function (){
         let tabla_Canceladascitas = document.querySelector('#Tabla_Realizadas tbody');
         //`select v.id, v.hour, v.date, use.name, sp.speciality, us.name as paciente, s.status
         //tabla_Canceladascitas.innerHTML="";
-        tabla_Canceladascitas.removeChild('<th></th>');
-        let arrayGeneral=[];
-        canceladas.forEach(element => {
-          arrayGeneral.push(element);
-        });
+        //tabla_Canceladascitas.removeChild('<th></th>');
+        //let arrayGeneral=[];
+        //canceladas.forEach(element => {
+         // arrayGeneral.push(element);
+        //});
         //console.table(arrayGeneral);
         let i=0;
         for (const itemCanceladas of canceladas) {
